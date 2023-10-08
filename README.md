@@ -1,8 +1,8 @@
-clone ไปใช้ต้อง run <br>
+clone ไปแล้วใช้ install node.js ก่อนนะ code ข้างล่าง
 ```bash
 npm i
 ```
-ก่อนนะถึงจะ run ได้<br>
+run with
 
 ```bash
 npm start 
