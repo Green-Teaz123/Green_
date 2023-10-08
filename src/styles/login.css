@@ -1,0 +1,106 @@
+@media screen and (max-width: 500px) {
+    body {
+        background-color: #AAC8A7;        
+        color: #445D48;
+        font-family: Noto Sans Thai UI;
+        overflow-y: hidden;
+    }
+
+    .big-black-box {
+        display: none;
+        height: fit-content;
+    }
+
+    .login-form{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo-name{
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .logo-name h1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .box-login, .register-form {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    .remember-me {
+        margin-left: 16px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .remember-me a {
+        font-size: 12px;
+    }
+
+    .remember-me input {
+        margin: 0px 10px ;
+    }
+
+    .line, .log {
+        width: fit-content;
+    }
+
+    .line {
+        border: 1px solid #445D48;
+        height: 0px;
+        width: 30px;
+        align-self: center;
+        justify-content: baseline;
+        margin: 10px;
+    }
+
+    .headline{
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+
+    .form-input{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+
+    .box-login label {
+        margin-left: 30px ;
+        font-size: 12px;
+    }
+
+    .swap-to-register{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+    }
+
+    .submitbtn {
+        background-color: #445D48;
+        border: 0px;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-weight: bolder;
+        padding: 10px;
+        margin: 10px 20px 10px 20px;
+        width: 40vw;
+        align-self: center;
+    }
+
+
+}
