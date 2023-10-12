@@ -28,6 +28,11 @@ body{
     margin: 0;
 }
 
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
 .order-detail {
     width: 250px;
     display: flex;

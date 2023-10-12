@@ -23,7 +23,7 @@ export default function Popup() {
 
                     <label>comment</label>
 
-                    <input type="text"  className="deliveryComment" />
+                    <textarea  className="deliveryComment" />
 
                 <div className="popup-footer">
                     <input type="submit" value="Pick it" />

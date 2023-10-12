@@ -1,0 +1,109 @@
+.create-order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.header-create-order {
+    width: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    height: 50px;
+}
+
+.header-create-order p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.form-create-order {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.form-create-order input {
+    width: 300px;
+    height: 30px;
+    border: 1px solid #445D48;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 0 10px;
+}
+
+.form-create-order textarea {
+    width: 300px;
+    height: 60px;
+    border: 1px solid #445D48;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.textLabel {
+    margin: 5px 0;
+    align-self: start;
+    font-size: 14px;
+}
+
+.add-order {
+    border: 1px solid #445D48;
+    border-radius: 10px;
+}
+
+.add-order-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 30px 0 40px;
+    margin: 0;
+    height: 40px;
+}
+
+.add-order-header p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #a0a9b1;
+    
+    
+}
+
+.add-order-item {
+    padding: 0 30px 0 0;
+}
+
+.order-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    height: 40px;
+}
+
+.dishes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    height: 30px;
+}
+
+.btn-cancel {
+    padding-top: 6px;
+    border: none;
+    background-color: transparent;
+    margin-right: 12px;
+}

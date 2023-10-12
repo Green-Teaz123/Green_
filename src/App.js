@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import Login from './page/login';
-import Kinglouy from './page/indexmain';
+import Kinglouy from './page/createOrder';
 
 function App() {
   return (
