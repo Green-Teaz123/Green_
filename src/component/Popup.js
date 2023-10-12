@@ -20,10 +20,15 @@ export default function Popup({ closePopup }) {
                 </div>
             </div>
             <div className="popup-inner">
-                <label>Delivery Name</label>
-                <input type="text"  className="deliveryName"  />
-                <label>comment</label>
-                <input type="text"  className="deliveryComment" />
+                    <label>Delivery Name</label>
+
+                    <input type="text"  className="deliveryName"  />
+
+
+                    <label>comment</label>
+
+                    <input type="text"  className="deliveryComment" />
+
                 <div className="popup-footer">
                     <input type="submit" value="Pick it" />
                 </div>
