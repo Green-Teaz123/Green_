@@ -1,0 +1,13 @@
+.MenuOrder {
+    margin-top: 5px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.MenuOrder p {
+    margin: 10px 0;
+    font-size: 12px;
+    
+}

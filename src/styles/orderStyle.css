@@ -1,0 +1,28 @@
+
+.tag-order{
+    display: flex;
+    justify-content: center;
+}
+.tag-order h2{
+    color: #445D48;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.box-1 {
+    border: 1px solid #445D48;
+    height: 0px;
+    width: 20px;
+    align-self: center;
+    justify-content: baseline;
+    margin-right: 10px;
+}
+.box-2 {
+    border: 1px solid #445D48;
+    height: 0px;
+    width: 250px;
+    align-self: center;
+    justify-content: baseline;
+    margin-left: 10px;
+}

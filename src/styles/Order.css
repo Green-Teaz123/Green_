@@ -1,0 +1,31 @@
+.order{
+    margin-bottom: 10px;
+}
+
+.didnt-pick {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #F6FFDE;
+}
+
+.order p{
+    color: #445D48;
+    font-size: 14px;
+    font-weight: lighter;
+    margin: 10px 0;
+    margin-top: 0;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.order-header h2 {
+    color: #445D48;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}

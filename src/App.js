@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 // import Login from './page/login';
-import Kinglouy from './page/nong_IT';
+import Kinglouy from './component/Popup';
 
 function App() {
   return (

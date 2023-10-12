@@ -1,19 +1,6 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.header {
-    background-color:white;
-    border: 2px solid #e7e7e7;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px #aaaaaa;
-    padding: 0 50px 0 50px;
-}
-
-.header h1 {
-    color: #000000;
-    font-size: 40px;
-    margin: 10px 0;
-}
 .create-order{
     display: flex;
     justify-content: center;
@@ -36,68 +23,4 @@ body{
     transition: 200ms;
 }
 
-.tag-order{
-    display: flex;
-    justify-content: center;
-}
-.tag-order h2{
-    color: #445D48;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-}
 
-.box-1 {
-    border: 1px solid #445D48;
-    height: 0px;
-    width: 20px;
-    align-self: center;
-    justify-content: baseline;
-    margin: 10px;
-}
-.box-2 {
-    border: 1px solid #445D48;
-    height: 0px;
-    width: 200px;
-    align-self: center;
-    justify-content: baseline;
-    margin: 10px;
-}
-
-.order{
-    margin-bottom: 10px;
-}
-
-.didnt-pick {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #F6FFDE;
-}
-
-.picked {
-    padding: 10px 20px;
-    border-radius: 10px;
-    background-color: #AAC8A7;
-}
-
-.order p{
-    color: #445D48;
-    font-size: 14px;
-    font-weight: lighter;
-    margin: 10px 0;
-    margin-top: 0;
-}
-
-.order-header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-}
-
-.order-header h2 {
-    color: #445D48;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
-}
