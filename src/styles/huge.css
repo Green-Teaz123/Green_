@@ -1,8 +1,9 @@
-.huge-dot{
-    border-radius: 100%;
-    background-color: #445D48;
-    height: 55vh;
-    width: 80vh;
-    margin-top: 15vh;
-    margin-left: -15vh;
+
+.huge-dot {
+    /* width: 20vh; */
+    height: 121px;
+    background-color: #445D48; 
+    border-top-left-radius: 999px; 
+    border-top-right-radius: 999px; 
+    margin: 10px 0px -10px 0px;
 }
