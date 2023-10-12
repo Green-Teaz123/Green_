@@ -3,7 +3,7 @@ import './App.css';
 import Header from './component/header';
 // import Login from './page/login';
 // import Kinglouy from './page/indexmain';
-import OrderInfo from './page/createOrder';
+import OrderInfo from './page/orderInfo';
 
 function App() {
   return (
