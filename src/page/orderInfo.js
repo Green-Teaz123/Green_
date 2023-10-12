@@ -3,20 +3,39 @@ import React from "react";
 import Order from "../component/orderStyle"
 import MenuOrder from "../component/MenuOrder"
 import Huge from "../component/huge"
-
+import { useState } from "react";
+import Popup from "../component/Popup";
 import "../styles/orderInfo.css";
 
 export default function OrderInfo() {
+    const [isPopupVisible, setPopupVisible] = useState(false);
+    const [orderName, setOrderName] = useState("");
+    const [restaurantName, setRestaurantName] = useState("");
+    const [pickUpLocation, setPickUpLocation] = useState("");
+    const togglePopup = () => {
+        setPopupVisible(!isPopupVisible);
+        const bodyBG = document.querySelector("body");
+        const boxOfOrderInfo = document.querySelector(".frame-order");
+        if (!isPopupVisible) {
+            bodyBG.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+            bodyBG.style.transition = "0.5s";
+            bodyBG.style.overflow = "hidden";
+            boxOfOrderInfo.style.filter = "blur(5px)";
+        } else {
+            bodyBG.style.backgroundColor = "white";
+            bodyBG.style.overflow = "auto";
+            boxOfOrderInfo.style.filter = "blur(0px)";
+        }
+    };
     return (
-        <div className="box-of-oder-info">
-            <div className="order-info">
-                <div className="info-header">
-                    <div className="header-title">
-                        <h2>Order name :</h2>
-
-                        {/* insert Order Name here */}
-                        <p>xxx xxxxxx</p>
-
+        <div className="box-of-order-info">
+            <div className="frame-order">
+                <div className="order-info">
+                    <div className="info-header">
+                        <div className="header-title">
+                            <h2>Order name :</h2>
+                            {/* insert Order Name here */}
+                            <p>xxx xxxxxx</p>
                     </div>
                     <button className="btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14" fill="none">
@@ -34,52 +53,47 @@ export default function OrderInfo() {
                 </div>
                 <div className="order-detail">
                         <h4>Restaurant name :</h4>
+                            {/* insert Restaurant here */}
+                            <p>xxx xxxxxx</p>
+                    </div>
+                    <div className="order-detail">
+                            <h4>Pick up location :</h4>
+                            {/* insert Location here */}
+                            <p>xxx xxxxxx</p>
+                            
+                    </div>
 
-                        {/* insert Restaurant here */}
-                        <p>xxx xxxxxx</p>
-
+                    <div className="comment">
+                        <h4>comment :</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eu ultrices vitae auctor eu augue. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae.</p>
+                    </div>
                 </div>
-                <div className="order-detail">
-                        <h4>Pick up location :</h4>
+                <div className="order">
+                    <Order />
+                    <div className="order-header">
+                        <p>Order Name</p>
+                        <p>Quantity</p>
+                    </div>
 
-                        {/* insert Location here */}
-                        <p>xxx xxxxxx</p>
-                        
+                    {/* insert Order  here */}
+                    <MenuOrder />
+                    <MenuOrder />
+                    <MenuOrder />
+                    <MenuOrder />
+                    <MenuOrder />
+                    <MenuOrder />
+                    <div className="OrderEnd">
+                        <p className="endLiner"></p>
+                    </div>
                 </div>
 
-                <div className="comment">
-                    <h4>comment :</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eu ultrices vitae auctor eu augue. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae.</p>
+                <div className="pick-up">
+                    <input type="submit" value="Pick it up" className="pick-order" onClick={togglePopup}/>
+                    <Huge />
                 </div>
             </div>
-            <div className="order">
-                <Order />
-                <div className="order-header">
-                    <p>Order Name</p>
-                    <p>Quantity</p>
-                </div>
-
-                {/* insert Order  here */}
-                <MenuOrder />
-                <MenuOrder />
-                <MenuOrder />
-                <MenuOrder />
-                <MenuOrder />
-                <MenuOrder />
-
-
-                <div className="OrderEnd">
-                    <p className="endLiner"></p>
-                </div>
-            </div>
-
-            <div className="pick-up">
-                <input type="submit" value="Pick it up" className="pick-order" />
-                <Huge />
-            </div>
-
-                
-
+            {isPopupVisible && <Popup closePopup={togglePopup} />}
+            {/* <Popup  /> */}
 
         </div>
 

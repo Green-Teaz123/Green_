@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../component/header";
 import OrderStyle from "../component/orderStyle";
 import Order from "../component/Order";
 import "../styles/main.css";
@@ -7,7 +6,6 @@ import "../styles/main.css";
 export default function King_louy() {
     return (
     <div>
-        <Header />
         <div className="create-order">
             <input type="submit" value="Create your meal +" />
         </div>
