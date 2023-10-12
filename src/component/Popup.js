@@ -1,8 +1,26 @@
 import React from "react";
-// import { useState } from "react";
+import { useState } from "react";
 import "../styles/Popup.css";
 
 export default function Popup({ closePopup }) {
+    const [deliveryName, setDeliveryName] = useState("");
+    const [deliveryComment, setDeliveryComment] = useState("");
+
+    const checkInput = () => {
+        if (deliveryName !== "" || deliveryComment !== "") {
+            document.querySelector(".popup-footer input").disabled = false;
+        } else {
+            document.querySelector(".popup-footer input").disabled = true;
+        }
+    };
+
+    const handleDeliveryANDcomment= (e) => {
+        setDeliveryName(e.target.value);
+        setDeliveryComment(e.target.value);
+        checkInput();
+        // console.log(deliveryName);
+        // console.log(deliveryComment);
+    }
 
     return (
         <div className="popup">
@@ -21,16 +39,11 @@ export default function Popup({ closePopup }) {
             </div>
             <div className="popup-inner">
                     <label>Delivery Name</label>
-
-                    <input type="text"  className="deliveryName"  />
-
-
+                    <input type="text"  className="deliveryName" onChange={handleDeliveryANDcomment} />
                     <label>comment</label>
-
-                    <input type="text"  className="deliveryComment" />
-
+                    <textarea className="deliveryComment" onChange={handleDeliveryANDcomment} />
                 <div className="popup-footer">
-                    <input type="submit" value="Pick it" />
+                    <input type="submit" value="Pick it" onClick={()=>console.log("testing")} />
                 </div>
             </div>
         </div>

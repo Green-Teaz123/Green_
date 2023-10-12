@@ -11,6 +11,7 @@ export default function OrderInfo() {
     const [orderName, setOrderName] = useState("");
     const [restaurantName, setRestaurantName] = useState("");
     const [pickUpLocation, setPickUpLocation] = useState("");
+    
     const togglePopup = () => {
         setPopupVisible(!isPopupVisible);
         const bodyBG = document.querySelector("body");
