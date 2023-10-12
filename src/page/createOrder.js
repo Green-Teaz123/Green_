@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../component/header";
 import "../styles/createOrder.css";
 
 export default function CreateOrder() {
     return (
         <div>
-            <Header />
             <div className="create-order">
                 <div className="header-create-order">
                     <p>Create meal order</p>

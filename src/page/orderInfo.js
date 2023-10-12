@@ -8,24 +8,19 @@ import "../styles/orderInfo.css";
 
 export default function OrderInfo() {
     const [isPopupVisible, setPopupVisible] = useState(false);
-
-
     const togglePopup = () => {
         setPopupVisible(!isPopupVisible);
         const bodyBG = document.querySelector("body");
         const boxOfOrderInfo = document.querySelector(".frame-order");
-        const popup = document.querySelector(".popup");
         if (!isPopupVisible) {
             bodyBG.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
             bodyBG.style.transition = "0.5s";
             bodyBG.style.overflow = "hidden";
             boxOfOrderInfo.style.filter = "blur(5px)";
-            // popup.style.filter = "blur(0px)";
         } else {
             bodyBG.style.backgroundColor = "white";
             bodyBG.style.overflow = "auto";
             boxOfOrderInfo.style.filter = "blur(0px)";
-            // popup.style.display = "none";
         }
     };
     return (
@@ -35,10 +30,8 @@ export default function OrderInfo() {
                     <div className="info-header">
                         <div className="header-title">
                             <h2>Order name :</h2>
-
                             {/* insert Order Name here */}
                             <p>xxx xxxxxx</p>
-
                     </div>
                     <div >
                         <a>
@@ -50,14 +43,11 @@ export default function OrderInfo() {
                 </div>
                 <div className="order-detail">
                         <h4>Restaurant name :</h4>
-
                             {/* insert Restaurant here */}
                             <p>xxx xxxxxx</p>
-
                     </div>
                     <div className="order-detail">
                             <h4>Pick up location :</h4>
-
                             {/* insert Location here */}
                             <p>xxx xxxxxx</p>
                             
@@ -82,8 +72,6 @@ export default function OrderInfo() {
                     <MenuOrder />
                     <MenuOrder />
                     <MenuOrder />
-
-
                     <div className="OrderEnd">
                         <p className="endLiner"></p>
                     </div>
@@ -95,6 +83,7 @@ export default function OrderInfo() {
                 </div>
             </div>
             {isPopupVisible && <Popup closePopup={togglePopup} />}
+            {/* <Popup  /> */}
 
         </div>
 
