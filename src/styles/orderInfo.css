@@ -2,13 +2,18 @@ body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.box-of-oder-info {
+
+.frame-order {
     display: grid;
     grid-template-rows: 1fr 1fr 0.5fr;
+    /* margin-right: 10px; */
+    /* padding:10px */
 }
 
 .order-info :where(h2, h3, h4) {
     margin: 5px 0;
+    color: #445D48;
+    font-weight:lighter;
 }
 
 .order-info {
@@ -17,13 +22,24 @@ body{
     border-radius: 10px;
     padding: 5px 20px;
     margin: 20px;
+    box-shadow: 0px 0px 10px 0px #a0a9b1;
 }
+
+
 
 .info-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.button-cancle {
+    padding: 0;
+    width: fit-content;
+    height: fit-content;
+    background-color:unset;
+    border: none;
 }
 
 .header-title {
@@ -65,6 +81,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    /* padding: 10px; */
 }
 .order-header {
     height: 30px;

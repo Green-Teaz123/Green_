@@ -11,6 +11,7 @@
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .popup-header {
@@ -21,7 +22,7 @@
 .popup-title {
     display: flex;
     flex-direction: row;
-}
+} 
 
 .popup-title p {
     margin: 0 5px 0 0;
