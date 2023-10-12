@@ -3,6 +3,8 @@ import '../styles/huge.css';
 
 export default function HugeDot() {
     return (
-        <div className="huge-dot"></div>
+        <div className='box-dot'>
+            <div className="huge-dot"></div>
+        </div>
     );
 }
