@@ -1,9 +1,7 @@
 
 .huge-dot {
-    /* width: 20vh; */
-    height: 121px;
+    height: 120px;
     background-color: #445D48; 
-    border-top-left-radius: 999px; 
-    border-top-right-radius: 999px; 
+    border-radius: 50% / 100% 100% 0 0;
     margin: 10px 0px -10px 0px;
 }
