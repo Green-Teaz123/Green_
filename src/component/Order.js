@@ -6,7 +6,7 @@ export default function Order() {
 
     useEffect(() => {
         // Make an API request when the component mounts
-        fetch("http://localhost:5093/api/getOrders")
+        fetch("http://localhost:5000/api/getOrders")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
