@@ -1,11 +1,9 @@
 import React from "react";
-import Header from "../component/header";
 import "../styles/createOrder.css";
 
 export default function CreateOrder() {
     return (
         <div>
-            <Header />
             <div className="create-order">
                 <div className="header-create-order">
                     <p>Create meal order</p>
@@ -17,13 +15,13 @@ export default function CreateOrder() {
                 </div>
                 <div className="form-create-order">
                     <label className="textLabel">Order name</label>
-                    <input type="text"/>
+                    <input type="text" className="textInput"/>
 
                     <label className="textLabel">Restaurant name</label>
-                    <input type="text"/>
+                    <input type="text" className="textInput"/>
 
                     <label className="textLabel">Pick up location</label>
-                    <input type="text"/>
+                    <input type="text" className="textInput"/>
 
                     <label className="textLabel">Comment</label>
                     <textarea/>
@@ -34,7 +32,7 @@ export default function CreateOrder() {
                             <p>Dishes</p>
                             <p>quantity</p>
                         </div>
-                        <div className="add-order-item">
+                        <div className="order-list-item">
                             <div className="order-item">
                                 <div className="dishes">
                                     <button className="btn-cancel">
@@ -45,12 +43,25 @@ export default function CreateOrder() {
                                     <p>food_1</p>
                                 </div>
                                 <p>1</p>
-                                
                             </div>
                         </div>
-
                     </div>
-                </div>
+                        
+                    <div className="gen-dishes">
+                            <input type="text" placeholder="Dishes name" className="dishe-name"/>
+                            <input type="text" placeholder="unit" className="quantity"/>
+                            <button className="btn-add">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 17 17" fill="none">
+                                    <path d="M7.55556 13.2222H9.44444V9.44444H13.2222V7.55556H9.44444V3.77778H7.55556V7.55556H3.77778V9.44444H7.55556V13.2222ZM1.88889 17C1.36945 17 0.924612 16.8149 0.55439 16.4447C0.184168 16.0744 -0.000628026 15.6299 1.60347e-06 15.1111V1.88889C1.60347e-06 1.36945 0.185113 0.924612 0.555335 0.55439C0.925557 0.184168 1.37008 -0.000628026 1.88889 1.60347e-06H15.1111C15.6306 1.60347e-06 16.0754 0.185113 16.4456 0.555335C16.8158 0.925557 17.0006 1.37008 17 1.88889V15.1111C17 15.6306 16.8149 16.0754 16.4447 16.4456C16.0744 16.8158 15.6299 17.0006 15.1111 17H1.88889Z" fill="#445D48"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Order" className="created" />
+                
+
+
             </div>
         </div>
     );
