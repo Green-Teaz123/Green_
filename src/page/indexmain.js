@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../component/header";
 import OrderStyle from "../component/orderStyle";
 import Order from "../component/Order";
-import "../styles/nong_IT.css";
+import "../styles/main.css";
 
 export default function King_louy() {
     return (
