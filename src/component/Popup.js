@@ -7,7 +7,7 @@ export default function Popup({ closePopup }) {
     const [deliveryComment, setDeliveryComment] = useState("");
 
     const checkInput = () => {
-        if (deliveryName !== "" || deliveryComment !== "") {
+        if (deliveryName !== "" && deliveryComment !== "") {
             document.querySelector(".popup-footer input").disabled = false;
         } else {
             document.querySelector(".popup-footer input").disabled = true;
