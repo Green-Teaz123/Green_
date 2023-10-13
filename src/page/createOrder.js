@@ -79,16 +79,36 @@ export default function CreateOrder() {
 
                     <label className="textLabel">Comment</label>
                     <textarea required value={comment} onChange={(e) => setComment(e.target.value)} />
+                    <label className="textLabel" id="lbl1">Order name</label>
+                    <input type="text" id="txtin1" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
 
-                    <label className="textLabel">Order</label>
+                    <label className="textLabel" id="lbl2">Restaurant name</label>
+                    <input type="text" id="txtin2" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
+
+                    <label className="textLabel" id="lbl3">Pick up location</label>
+                    <input type="text" id="txtin3" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
+
+                    <label className="textLabel" id="lbl4">Comment</label>
+                    <textarea id="txtarea" value={comment} onChange={(e) => setComment(e.target.value)}/>
+
+                    <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
                         <div className="add-order-header">
-                            <p>Dishes</p>
-                            <p>quantity</p>
+                            <p id="p1">Dishes</p>
+                            <p id="p2">Quantity</p>
                         </div>
                         {items.map((item, index) => (
                         <Dish key={index} dish={item.dish} quantity={item.quantity} />
                         ))}
+
+                        <div className="order-success-add">   
+                            {items.map((item, index) => (
+                            <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
+                            ))}
+                        </div>
+
+                    <div className="vl"></div>
+
                     </div>
                     <div className="gen-dishes">
                             <input type="text" placeholder="Enter you order" className="dishe-name"/>
