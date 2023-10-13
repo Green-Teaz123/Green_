@@ -139,7 +139,7 @@
         width: 1200px;
     }
     .create-order .header-create-order {
-        margin-right: -140%;
+        margin-right: -144%;
         margin-top: 1%;
     }
     .create-order .header-create-order p {
@@ -221,5 +221,11 @@
     .gen-dishes .btn-add{
         margin-top: -80%;
         margin-left: 1%;
+    }
+    .created{
+        margin-right: -61%;
+        margin-top: -2%;
+        background-color: #445D48;
+        color: white;
     }
 }
