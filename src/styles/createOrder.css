@@ -193,6 +193,12 @@
         margin-top: -45%;
         font-size: 150%;
     }
+    .add-order{
+        margin-top: 7%;
+        margin-left: 5%;
+        width: 40%;
+        height: 420px;
+    }
     .add-order .add-order-header #p1{
         margin-left: -10%;
         margin-top: -18%;
@@ -211,12 +217,6 @@
     .gen-dishes .quantity{
         margin-top: -80%;
         width: 3%;
-    }
-    .add-order{
-        margin-top: 7%;
-        margin-left: 5%;
-        width: 40%;
-        height: 420px;
     }
     .gen-dishes .btn-add{
         margin-top: -80%;
