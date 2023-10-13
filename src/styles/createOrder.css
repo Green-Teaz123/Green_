@@ -188,5 +188,19 @@
         width: 37%;
         height: 200px;
     }
-
+    .create-order .form-create-order #lbl5{
+        margin-left: 20%;
+        margin-top: -45%;
+        font-size: 150%;
+    }
+    .add-order .add-order-header #p1{
+        margin-left: 2%;
+        margin-top: 1%;
+        font-size: 100%;
+    }
+    .add-order .add-order-header #p2{
+        margin-right: 65%;
+        margin-top: 1%;
+        font-size: 100%;
+    }
 }
