@@ -3,7 +3,7 @@
         background-color: #AAC8A7;        
         color: #445D48;
         font-family: Noto Sans Thai UI;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
     }
 
     .big-black-box {

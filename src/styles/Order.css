@@ -1,12 +1,12 @@
-
 .didnt-pick {
-    margin: 10px 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 15px;
     padding: 10px 20px;
     border-radius: 10px;
     background-color: #F6FFDE;
 }
 
-.order p{
+.order-box p{
     color: #445D48;
     font-size: 14px;
     font-weight: lighter;
@@ -22,9 +22,16 @@
     align-items: center;
 }
 
-.order-header h2 {
-    color: #445D48;
-    font-size: 20px;
-    font-weight: bold;
-    margin: 10px 0;
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+    .order-box p {
+        color: red;
+    }
 }

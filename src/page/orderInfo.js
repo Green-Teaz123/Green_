@@ -60,9 +60,9 @@ export default function OrderInfo() {;
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
-          <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
+            <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
         ));
-      };
+    };
 
     return (
         <div className="box-of-order-info">
