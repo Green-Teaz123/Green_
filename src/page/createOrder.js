@@ -84,10 +84,11 @@ export default function CreateOrder() {
                             <p id="p2">Quantity</p>
                         </div>
 
-                            
-                        {items.map((item, index) => (
-                        <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
-                        ))}
+                        <div className="order-success-add">   
+                            {items.map((item, index) => (
+                            <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
+                            ))}
+                        </div>
 
 
 

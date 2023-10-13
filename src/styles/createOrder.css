@@ -228,4 +228,7 @@
         background-color: #445D48;
         color: white;
     }
+    .order-success-add {
+        margin-top: -6%;
+    }
 }
