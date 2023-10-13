@@ -194,22 +194,22 @@
         font-size: 150%;
     }
     .add-order .add-order-header #p1{
-        margin-left: 2%;
-        margin-top: -15%;
+        margin-left: -10%;
+        margin-top: -18%;
         font-size: 100%;
     }
     .add-order .add-order-header #p2{
-        margin-right: 30%;
-        margin-top: -15%;
+        margin-right: 20%;
+        margin-top: -18%;
         font-size: 100%;
     }
     .gen-dishes .dishe-name{
-        margin-left: 6%;
-        margin-top: -18%;
+        margin-left: 5%;
+        margin-top: -80%;
         width: 23%;
     }
     .gen-dishes .quantity{
-        margin-top: -18%;
+        margin-top: -80%;
         width: 3%;
     }
     .add-order{
