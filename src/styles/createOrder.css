@@ -195,18 +195,18 @@
     }
     .add-order .add-order-header #p1{
         margin-left: 2%;
-        margin-top: 1%;
+        margin-top: -15%;
         font-size: 100%;
     }
     .add-order .add-order-header #p2{
-        margin-right: 65%;
-        margin-top: 1%;
+        margin-right: 30%;
+        margin-top: -15%;
         font-size: 100%;
     }
     .gen-dishes .dishe-name{
-        margin-left: 2%;
-        margin-top: 1%;
-        width: 30%;
+        margin-left: 6%;
+        margin-top: -18%;
+        width: 20%;
     }
     .gen-dishes .quantity{
         margin-left: 2%;
