@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import Order from "../component/orderStyle"
 import MenuOrder from "../component/MenuOrder"
 import Huge from "../component/huge"
@@ -9,11 +9,13 @@ import "../styles/orderInfo.css";
 
 export default function OrderInfo(props) {
     const [isPopupVisible, setPopupVisible] = useState(false);
-    const [orderName, setOrderName] = useState("");
-    const [restaurantName, setRestaurantName] = useState("");
-    const [pickUpLocation, setPickUpLocation] = useState("");
-    
+    // const [orderName, setOrderName] = useState("");
+    // const [restaurantName, setRestaurantName] = useState("");
+    // const [pickUpLocation, setPickUpLocation] = useState("");
+
     const to_the_next_package = () => {
+        // const order = {orderName: "orderName", restaurantName: "restaurantName", pickUpLocation: "pickUpLocation"}
+        // const orderString = JSON.stringify(order);
         window.location.href = "http://localhost:3000/";
         // return <Link to="/orderInfo" className="order-link"></Link>;
     }
