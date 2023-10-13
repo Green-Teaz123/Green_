@@ -128,5 +128,18 @@
     margin-bottom: 35px;
 }
 
+@media only screen and (min-width : 1200px) {
+    .create-order .header-create-order {
+        margin-right: -70%;
+        margin-top: 1%;
+    }
+    .create-order .header-create-order p {
+        font-size: 150%;
+    }
+    .create-order .header-create-order .btn {
+        margin-right: 10%;
+    }
 
-
+     
+    
+}

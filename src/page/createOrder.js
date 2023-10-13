@@ -43,19 +43,19 @@ export default function CreateOrder() {
                     </button>
                 </div>
                 <div className="form-create-order">
-                    <label className="textLabel">Order name</label>
+                    <label className="textLabel" id="lbl1">Order name</label>
                     <input type="text" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
 
-                    <label className="textLabel">Restaurant name</label>
+                    <label className="textLabel" id="lbl2">Restaurant name</label>
                     <input type="text" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
 
-                    <label className="textLabel">Pick up location</label>
+                    <label className="textLabel" id="lbl3">Pick up location</label>
                     <input type="text" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
 
-                    <label className="textLabel">Comment</label>
+                    <label className="textLabel" id="lbl4">Comment</label>
                     <textarea value={comment} onChange={(e) => setComment(e.target.value)}/>
 
-                    <label className="textLabel">Order</label>
+                    <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
                         <div className="add-order-header">
                             <p>Dishes</p>
