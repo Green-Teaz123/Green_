@@ -8,7 +8,7 @@ export default function CreateOrder() {
     const [place, setPlace] = useState("");
     const [comment, setComment] = useState("");
     const [isGrab] = useState(true);
-    const [items ,setItems] = useState([]); //เหลือ ยัด dish ลงไป และ ยัด quantity ลงไป
+    const [items ,setItems] = useState([]);
 
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/";
@@ -26,16 +26,20 @@ export default function CreateOrder() {
 
         setItems((prevItems) => [
             ...prevItems,
-            { Dish: dishName, Quantity: parseInt(quantity) }
+            { dish: dishName, quantity: parseInt(quantity) }
         ]);
 
         // clear input
         document.querySelector('.dishe-name').value = "";
-        document.querySelector('.quantity').value = "";        
+        document.querySelector('.quantity').value = "";  
         console.log('add dish success');
     }
 
     const handleSubmit = (e) => {
+        if (!orderName || !res_name || !place || !comment || items.length === 0) {
+            alert("Please fill in all fields.");
+            return;
+        }
         fetch('http://localhost:5000/api/create', {
             method: 'POST',
             headers: {"content-type": "application/json"},
@@ -47,11 +51,10 @@ export default function CreateOrder() {
                 isGrab: isGrab,
                 items: items
             })
-        }).then((e) => 
+        }).then((e) =>
         console.log(e),
         console.log('add order success'))}
         console.log(items);
-
 
     return (
         <div>
@@ -66,16 +69,16 @@ export default function CreateOrder() {
                 </div>
                 <div className="form-create-order">
                     <label className="textLabel">Order name</label>
-                    <input type="text" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
+                    <input type="text" className="textInput"  value={orderName} onChange={(e) => setOrderName(e.target.value)} />
 
                     <label className="textLabel">Restaurant name</label>
-                    <input type="text" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
+                    <input type="text" className="textInput"  value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
 
                     <label className="textLabel">Pick up location</label>
-                    <input type="text" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
+                    <input type="text" className="textInput"  value={place} onChange={(e) => setPlace(e.target.value)} />
 
                     <label className="textLabel">Comment</label>
-                    <textarea value={comment} onChange={(e) => setComment(e.target.value)}/>
+                    <textarea required value={comment} onChange={(e) => setComment(e.target.value)} />
 
                     <label className="textLabel">Order</label>
                     <div className="add-order">
@@ -83,18 +86,11 @@ export default function CreateOrder() {
                             <p>Dishes</p>
                             <p>quantity</p>
                         </div>
-
-                            
                         {items.map((item, index) => (
-                        <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
+                        <Dish key={index} dish={item.dish} quantity={item.quantity} />
                         ))}
-
-
-
-
                     </div>
                     <div className="gen-dishes">
-
                             <input type="text" placeholder="Enter you order" className="dishe-name"/>
                             <input type="text" placeholder="unit" className="quantity"/>
                             
@@ -105,11 +101,7 @@ export default function CreateOrder() {
                             </button>
                         </div>
                     </div>
-
                     <input type="submit" value="Pick it up" className="created" onClick={handleSubmit} />
-                
-
-
             </div>
         </div>
     );
