@@ -20,9 +20,10 @@ export default function Order() {
             .then(data => {
                 // Handle the API response, for example, set the orders in state
                 setOrders(data);
-                setOrderName(data[1].orderName);
-                setRes_name(data[1].res_name);
-                setPlace(data[1].place);
+                console.log(data);
+                // setOrderName(data[1].orderName);
+                // setRes_name(data[1].res_name);
+                // setPlace(data[1].place);
 
             })
             .catch(error => {
@@ -30,7 +31,13 @@ export default function Order() {
                 console.error("Error fetching orders:", error);
             });
     }, []);
-
+    const decairmode = (varia_To_path)=> { 
+        setOrderName(varia_To_path.orderName);
+        setRes_name(varia_To_path.res_name);
+        setPlace(varia_To_path.place);
+        to_the_next_package();
+        console.log(orderName, res_name, place);
+    }
     const navigate  = useNavigate();
     const to_the_next_package = () => {
         navigate("/orderInfo",{
@@ -41,12 +48,12 @@ export default function Order() {
         }});
     }
     return (
-            <div className="order" onClick={to_the_next_package}>
+            <div className="order"  >
                 {orders.map(order => (               
-                    <div className="didnt-pick" key={order.id} >
+                    <div className="didnt-pick" key={order.id} onClick={()=>decairmode(order)}  >
                         <div className="order-header" >
-                            <h2 onClick={()=>console.log(orderName)}>Order name: {order.orderName}</h2>
-                            <div >
+                            <h2 >Order name: {order.orderName}</h2>
+                            <div  >
                                 <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     {/* Your SVG content */}
                                 </svg>
