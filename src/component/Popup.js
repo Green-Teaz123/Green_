@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
 
-export default function Popup({ closePopup }) {
+export default function Popup({ closePopup }, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
@@ -18,23 +18,18 @@ export default function Popup({ closePopup }) {
         setDeliveryName(e.target.value);
         setDeliveryComment(e.target.value);
         checkInput();
-        // console.log(deliveryName);
-        // console.log(deliveryComment);
     }
 
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/orderInfo";
-        // return <Link to="/orderInfo" className="order-link"></Link>;
     }
 
     return (
         <div className="popup">
-            
             <div className="popup-header">
-                
                 <div className="popup-title">
                     <p>Order :</p>
-                    <p>xxx xxxxxx</p>
+                    <p>{props.orderName}</p>
                 </div>
                 <div> 
                     <button className="button-cancle" onClick={closePopup}>

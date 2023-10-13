@@ -4,13 +4,10 @@ import "../styles/Order.css";
 
 export default function Order() {
     const [orders, setOrders] = useState([]);
-    const [orderName, setOrderName] = useState("");
-    const [res_name, setRes_name] = useState("");
-    const [place, setPlace] = useState("");
-
+    
     useEffect(() => {
         // Make an API request when the component mounts
-        fetch("http://localhost:5000/api/getOrders")
+        fetch("https://localhost:5001/api/getOrders")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -18,44 +15,32 @@ export default function Order() {
                 return response.json();
             })
             .then(data => {
-                // Handle the API response, for example, set the orders in state
                 setOrders(data);
-                console.log(data);
-                // setOrderName(data[1].orderName);
-                // setRes_name(data[1].res_name);
-                // setPlace(data[1].place);
+
+                // console.log(data);
 
             })
             .catch(error => {
-                // Handle any errors from the API request
                 console.error("Error fetching orders:", error);
             });
     }, []);
-    // const decairmode = (varia_To_path)=> { 
-    //     setOrderName(varia_To_path.orderName);
-    //     setRes_name(varia_To_path.res_name);
-    //     setPlace(varia_To_path.place);
-        
-    //     // setInterval(() => {
-    //     //     to_the_next_package();
-    //     // }, 1);
-    //     // to_the_next_package();
-    // }
     const navigate  = useNavigate();
-    const to_the_next_package = (orderName, res_name, place) => {
+    const to_the_next_package = (id, orderName, res_name, place, comment) => {
         console.log(orderName, res_name, place);
         navigate("/orderInfo",{
             state: {
+                id,
                 orderName, 
                 res_name,
                 place,
+                comment
         }});
         
     }
     return (
             <div className="order"  >
                 {orders.map(order => (               
-                    <div className="didnt-pick" key={order.id} onClick={()=> to_the_next_package(order.orderName, order.res_name, order.place)}  >
+                    <div className="didnt-pick" key={order.id} onClick={()=> to_the_next_package(order.id ,order.orderName, order.res_name, order.place, order.comment)}  >
                         <div className="order-header" >
                             <h2 >Order name: {order.orderName}</h2>
                             <div  >
