@@ -82,6 +82,7 @@ export default function CreateOrder() {
 
                     <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
+                       
                         <div className="add-order-header">
                             <p id="p1">Dishes</p>
                             <p id="p2">Quantity</p>
@@ -89,12 +90,6 @@ export default function CreateOrder() {
                         {items.map((item, index) => (
                         <Dish key={index} dish={item.dish} quantity={item.quantity} />
                         ))}
-
-                        <div className="order-success-add">   
-                            {items.map((item, index) => (
-                            <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
-                            ))}
-                        </div>
 
                     <div className="vl"></div>
 
