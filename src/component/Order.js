@@ -1,25 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate  , Link } from "react-router-dom";
 import "../styles/Order.css";
 
 export default function Order() {
-    return (
-        <div className="order">
-            <div className="didnt-pick">
-                <div className="order-header">
-                    <h2>Order name : xxx xxxxxx</h2>
-                    <div>
-                        <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="carbon:view-filled">
-                        <path id="Vector" d="M6 7.5C5.17157 7.5 4.5 6.82843 4.5 6C4.5 5.17157 5.17157 4.5 6 4.5C6.82843 4.5 7.5 5.17157 7.5 6C7.5 6.82843 6.82843 7.5 6 7.5Z" fill="black"/>
-                        <path id="Vector_2" d="M0.397475 5.8725C0.838535 4.73162 1.60423 3.74498 2.59993 3.03453C3.59562 2.32408 4.77767 1.92096 5.99998 1.875C7.22228 1.92096 8.40433 2.32408 9.40003 3.03453C10.3957 3.74498 11.1614 4.73162 11.6025 5.8725C11.6323 5.95489 11.6323 6.04511 11.6025 6.1275C11.1614 7.26838 10.3957 8.25502 9.40003 8.96547C8.40433 9.67592 7.22228 10.079 5.99998 10.125C4.77767 10.079 3.59562 9.67592 2.59993 8.96547C1.60423 8.25502 0.838535 7.26838 0.397475 6.1275C0.367688 6.04511 0.367688 5.95489 0.397475 5.8725ZM5.99998 8.4375C6.48207 8.4375 6.95333 8.29454 7.35418 8.02671C7.75502 7.75887 8.06744 7.37819 8.25193 6.93279C8.43642 6.4874 8.48469 5.9973 8.39064 5.52447C8.29659 5.05164 8.06444 4.61732 7.72355 4.27643C7.38266 3.93554 6.94834 3.70339 6.47551 3.60934C6.00268 3.51528 5.51258 3.56356 5.06718 3.74804C4.62179 3.93253 4.2411 4.24495 3.97327 4.6458C3.70543 5.04664 3.56248 5.51791 3.56248 6C3.56347 6.64616 3.82059 7.26557 4.2775 7.72248C4.7344 8.17938 5.35382 8.43651 5.99998 8.4375Z" fill="#445D48"/>
-                        </g>
-                        </svg>
-                    </div>
-                </div>
-                <p>Restaurant name : xxxxxxxx</p>
-                <p>Pick up location : xxxxxxxxx</p>
-            </div>
-        </div>
+    const [orders, setOrders] = useState([]);
+    const [orderName, setOrderName] = useState("");
+    const [res_name, setRes_name] = useState("");
+    const [place, setPlace] = useState("");
 
+    useEffect(() => {
+        // Make an API request when the component mounts
+        fetch("http://localhost:5000/api/getOrders")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok");
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the API response, for example, set the orders in state
+                setOrders(data);
+                console.log(data);
+                // setOrderName(data[1].orderName);
+                // setRes_name(data[1].res_name);
+                // setPlace(data[1].place);
+
+            })
+            .catch(error => {
+                // Handle any errors from the API request
+                console.error("Error fetching orders:", error);
+            });
+    }, []);
+    const decairmode = (varia_To_path)=> { 
+        setOrderName(varia_To_path.orderName);
+        setRes_name(varia_To_path.res_name);
+        setPlace(varia_To_path.place);
+        to_the_next_package();
+        console.log(orderName, res_name, place);
+    }
+    const navigate  = useNavigate();
+    const to_the_next_package = () => {
+        navigate("/orderInfo",{
+            state: {
+                orderName: orderName, 
+                res_name: res_name,
+                place: place,
+        }});
+    }
+    return (
+            <div className="order"  >
+                {orders.map(order => (               
+                    <div className="didnt-pick" key={order.id} onClick={()=>decairmode(order)}  >
+                        <div className="order-header" >
+                            <h2 >Order name: {order.orderName}</h2>
+                            <div  >
+                                <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    {/* Your SVG content */}
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Restaurant name: {order.res_name}</p>
+                        <p>Pick up location: {order.place}</p>
+                    </div>
+                ))}
+            </div>
     );
 }

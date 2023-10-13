@@ -22,9 +22,16 @@ export default function Popup({ closePopup }) {
         // console.log(deliveryComment);
     }
 
+    const to_the_next_package = () => {
+        window.location.href = "http://localhost:3000/orderInfo";
+        // return <Link to="/orderInfo" className="order-link"></Link>;
+    }
+
     return (
         <div className="popup">
+            
             <div className="popup-header">
+                
                 <div className="popup-title">
                     <p>Order :</p>
                     <p>xxx xxxxxx</p>
@@ -39,11 +46,11 @@ export default function Popup({ closePopup }) {
             </div>
             <div className="popup-inner">
                     <label>Delivery Name</label>
-                    <input type="text"  className="deliveryName" onChange={handleDeliveryANDcomment} />
+                    <input type="text"  className="deliveryName" onChange={ ()=>handleDeliveryANDcomment} />
                     <label>comment</label>
-                    <textarea className="deliveryComment" onChange={handleDeliveryANDcomment} />
+                    <textarea className="deliveryComment" onChange={()=>handleDeliveryANDcomment} />
                 <div className="popup-footer">
-                    <input type="submit" value="Pick it" onClick={()=>console.log("testing")} />
+                    <input type="submit" value="Pick it" onClick={to_the_next_package} />
                 </div>
             </div>
         </div>

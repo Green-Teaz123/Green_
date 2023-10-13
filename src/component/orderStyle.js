@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/orderStyle.css"
 
 export default function orderStyle() {
+
     return (
         <div className="tag-order">
             <p className="box-1"></p>

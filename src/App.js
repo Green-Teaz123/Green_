@@ -4,12 +4,15 @@ import './App.css';
 // import Login from './page/login';
 // import Kinglouy from './page/indexmain';
 import OrderInfo from './page/createOrder';
+import Kinglouy from './page/indexmain';
+import Header from './component/header';
 
 function App() {
   return (
     <div>
-      {/* <Kinglouy /> */}
-      <OrderInfo />
+      
+      <Kinglouy />
+      {/* <OrderInfo /> */}
     </div>
   );
 }
