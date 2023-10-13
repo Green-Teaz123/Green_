@@ -261,18 +261,18 @@
     }
     .created{
         margin-right: -60%;
-        margin-top: 10%;
+        margin-top: -12%;
         background-color: #445D48;
         color: white;
     }
     .vl{
         margin-left: 120%;
-        margin-top: 1%;
+        margin-top: -27%;
         border-left: 6px solid #D9D9D9;
-        height: 80vh;
+        height: 75vh;
     }
     .add-order{
-        margin-top: 18%;
+        margin-top: 5%;
         margin-left: 5%;
         width: 40%;
         height: 420px;
@@ -280,17 +280,23 @@
     .create-order .gen-dishes{
         margin-top: 12.5%;
     }
+    .create-order .gen-dishes .dishe-name{
+        width: 30.5%;
+    }
     .create-order .add-order-header{
-        margin-top: 6%;
+        margin-top: 5%;
     }
     .create-order .add-order-header #p1{
         margin-left: -7%;
         font-size: 100%;
     }
     .create-order .add-order-header #p2{
-        margin-right: 14%;
+        margin-right: 7%;
         font-size: 100%;
     }
     .create-order .form-create-order #lbl5{
+        margin-top: -33%;
+        margin-left: 22%;
+        font-weight: bold;
     }
 }
