@@ -1,3 +1,6 @@
+*{
+    color: #445D48;
+}
 .create-order{
     display: flex;
     align-items: center;
@@ -31,8 +34,7 @@
 .form-create-order {
     display: flex;
     flex-direction: column;
-    font-size: 16px;
-    font-weight: bold;
+
 }
 
 .textInput {
@@ -80,8 +82,6 @@
     
     
 }
-
-
 
 .gen-dishes {
     display: flex;
@@ -139,7 +139,7 @@
         width: 1200px;
     }
     .create-order .header-create-order {
-        margin-right: -140%;
+        margin-right: -144%;
         margin-top: 1%;
     }
     .create-order .header-create-order p {
@@ -193,29 +193,52 @@
         margin-top: -45%;
         font-size: 150%;
     }
-    .add-order .add-order-header #p1{
-        margin-left: -10%;
-        margin-top: -18%;
-        font-size: 100%;
-    }
-    .add-order .add-order-header #p2{
-        margin-right: 20%;
-        margin-top: -18%;
-        font-size: 100%;
-    }
-    .gen-dishes .dishe-name{
-        margin-left: 5%;
-        margin-top: -80%;
-        width: 23%;
-    }
-    .gen-dishes .quantity{
-        margin-top: -80%;
-        width: 3%;
-    }
     .add-order{
         margin-top: 7%;
         margin-left: 5%;
         width: 40%;
         height: 420px;
     }
+    .add-order .add-order-header #p1{
+        margin-left: -10%;
+        margin-top: -18%;
+        font-size: 100%;
+    }
+    .add-order .add-order-header #p2{
+        margin-right: 6%;
+        margin-top: -18%;
+        font-size: 100%;
+    }
+    .gen-dishes .dishe-name{
+        margin-left: 5%;
+        margin-top: -80%;
+        width: 28%;
+    }
+    .gen-dishes .quantity{
+        margin-top: -80%;
+        width: 3%;
+    }
+    .gen-dishes .btn-add{
+        margin-top: -80%;
+        margin-left: 1%;
+    }
+    .created{
+        margin-right: -61%;
+        margin-top: -2%;
+        background-color: #445D48;
+        color: white;
+    }
+    .order-success-add {
+        margin-top: -6%;
+    }
+    .vl {
+        margin-left: 120%;
+        margin-top: -30%;
+        border-left: 6px solid #D9D9D9;
+        height: 80vh;
+      }
+}
+
+@media only screen and (min-width: 1800px){
+
 }
