@@ -54,12 +54,23 @@ export default function CreateOrder() {
 
                     <label className="textLabel">Comment</label>
                     <textarea value={comment} onChange={(e) => setComment(e.target.value)}/>
+                    <label className="textLabel" id="lbl1">Order name</label>
+                    <input type="text" className="textInput" id="txtin1"/>
 
-                    <label className="textLabel">Order</label>
+                    <label className="textLabel" id="lbl2">Restaurant name</label>
+                    <input type="text" className="textInput" id="txtin2"/>
+
+                    <label className="textLabel" id="lbl3">Pick up location</label>
+                    <input type="text" className="textInput" id="txtin3"/>
+
+                    <label className="textLabel" id="lbl4">Comment</label>
+                    <textarea id="txtarea"/>
+
+                    <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
                         <div className="add-order-header">
-                            <p>Dishes</p>
-                            <p>quantity</p>
+                            <p id="p1">Order Name</p>
+                            <p id="p2">Quantity</p>
                         </div>
 
                         {/* insert dish here */}
@@ -72,8 +83,8 @@ export default function CreateOrder() {
                         
                     <div className="gen-dishes">
 
-                            <input type="text" placeholder="Enter you order" className="dishe-name"/>
-                            <input type="text" placeholder="unit" className="quantity"/>
+                            <input type="text" className="dishe-name"/>
+                            <input type="text" className="quantity"/>
                             
                             <button className="btn-add">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 17 17" fill="none">
@@ -83,7 +94,9 @@ export default function CreateOrder() {
                         </div>
                     </div>
 
+
                     <input type="submit" value="Pick it up" className="created" onClick={handleSubmit} />
+                    <input type="submit" value="Pick it up" className="created"/>
                 
 
 
