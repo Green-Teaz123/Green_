@@ -12,15 +12,7 @@ body{
     display: flex;
     justify-content: center;
 }
-
-.btn {
-    border: none;
-    background-color: transparent;
-}
-
-.create-order-dk input{
-    display: block;
-    margin:  20px auto 20px auto ; 
+.create-order input{
     width: 300px;
     height: 50px;
     text-align: center;
@@ -30,8 +22,9 @@ body{
     font-weight: bold;
     color: #445D48;
     transition: 500ms;
+    background-color: white;
 }
-.create-order-dk input:hover{
+.create-order input:hover{
     background-color: #c1e1be;
     color: #445D48;
     transition: 200ms;
