@@ -1,6 +1,6 @@
 
 .tag-order{
-    display: flex;
+    display:flex;
     justify-content: center;
 }
 .tag-order h2{
@@ -25,4 +25,25 @@
     align-self: center;
     justify-content: baseline;
     margin-left: 10px;
+}
+
+.tag-order-dk{
+    margin-left: auto;
+}
+
+.tag-order-dk h1{
+    color: #445D48;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.box-3 {
+    border: 1px solid #445D48;
+    height: 4px;
+    width: 1000px;
+    background-color: #445D48;
+    align-self: center;
+    justify-content: baseline;
+    margin-left: 25px;
 }

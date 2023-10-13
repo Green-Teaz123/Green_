@@ -1,4 +1,4 @@
-.create-order {
+.create-order{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,6 +126,5 @@
     color: #445D48;
     margin-top: 15px;
     margin-bottom: 35px;
-}
-
+}  
 
