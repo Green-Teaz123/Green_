@@ -158,6 +158,16 @@
     }
     .create-order .form-create-order #txtin1{
         margin-left: 60%;
+        width: 37%;
+    }
+    .create-order .form-create-order #lbl2{
+        margin-left: 60%;
+        margin-top: 1%;
+        font-size: 110%;
+    }
+    .create-order .form-create-order #txtin2{
+        margin-left: 60%;
+        width: 37%;
     }
 
 
