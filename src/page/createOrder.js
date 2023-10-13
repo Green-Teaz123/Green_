@@ -1,11 +1,36 @@
-import React from "react";
+import React,{useState} from "react";
 import Dish from "../component/dishe";
 import "../styles/createOrder.css";
 
 export default function CreateOrder() {
+    const [orderName, setOrderName] = useState("");
+    const [res_name, setRes_name] = useState("");
+    const [place, setPlace] = useState("");
+    const [comment, setComment] = useState("");
+    const [isGrab] = useState(true);
+    const [items] = useState([{Dish:"food_1", Quantity:1}]); //เหลือ ยัด dish ลงไป และ ยัด quantity ลงไป
+
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/";
     }
+
+    const handleSubmit = (e) => {
+        fetch('http://localhost:5000/api/create', {
+            method: 'POST',
+            headers: {"content-type": "application/json"},
+            body: JSON.stringify({
+                orderName: orderName,
+                res_name: res_name,
+                place: place,
+                comment: comment,
+                isGrab: isGrab,
+                items: items
+            })
+        }).then((e) => 
+        console.log(e),
+        console.log('add order success'))}
+
+
     return (
         <div>
             <div className="create-order">
@@ -19,16 +44,16 @@ export default function CreateOrder() {
                 </div>
                 <div className="form-create-order">
                     <label className="textLabel">Order name</label>
-                    <input type="text" className="textInput"/>
+                    <input type="text" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
 
                     <label className="textLabel">Restaurant name</label>
-                    <input type="text" className="textInput"/>
+                    <input type="text" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
 
                     <label className="textLabel">Pick up location</label>
-                    <input type="text" className="textInput"/>
+                    <input type="text" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
 
                     <label className="textLabel">Comment</label>
-                    <textarea/>
+                    <textarea value={comment} onChange={(e) => setComment(e.target.value)}/>
 
                     <label className="textLabel">Order</label>
                     <div className="add-order">
@@ -47,7 +72,7 @@ export default function CreateOrder() {
                         
                     <div className="gen-dishes">
 
-                            <input type="text" placeholder="Dishes name" className="dishe-name"/>
+                            <input type="text" placeholder="Enter you order" className="dishe-name"/>
                             <input type="text" placeholder="unit" className="quantity"/>
                             
                             <button className="btn-add">
@@ -58,7 +83,7 @@ export default function CreateOrder() {
                         </div>
                     </div>
 
-                    <input type="submit" value="Pick it up" className="created" />
+                    <input type="submit" value="Pick it up" className="created" onClick={handleSubmit} />
                 
 
 

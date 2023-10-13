@@ -32,6 +32,7 @@ body{
     color: #445D48;
     transition: 500ms;
     background-color: white;
+    margin: 20px 0 10px 0;
 }
 .create-order-dk input:hover{
     background-color: #c1e1be;
