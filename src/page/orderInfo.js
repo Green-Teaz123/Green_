@@ -20,7 +20,7 @@ export default function OrderInfo() {;
     }
 
     useEffect(() => { 
-        fetch("https://localhost:7263/api/getOrder/"+props.id)
+        fetch("https://localhost:5001/api/getOrder/"+props.id)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -60,9 +60,9 @@ export default function OrderInfo() {;
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
-            <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
+          <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
         ));
-    };
+      };
 
     return (
         <div className="box-of-order-info">
