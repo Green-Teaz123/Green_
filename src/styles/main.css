@@ -12,7 +12,7 @@ body{
     display: flex;
     justify-content: center;
 }
-.create-order input{
+.only-indexmain-input{
     width: 300px;
     height: 50px;
     text-align: center;
@@ -23,14 +23,15 @@ body{
     color: #445D48;
     transition: 500ms;
     background-color: white;
+    margin: 20px 0 10px 0;
 }
-.create-order input:hover{
+.only-indexmain-input:hover{
     background-color: #c1e1be;
     color: #445D48;
     transition: 200ms;
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     .create-order-btn{
         display: block;
         position: absolute;
@@ -50,5 +51,5 @@ body{
         text-align: center;
         
     }
-}
+} */
 

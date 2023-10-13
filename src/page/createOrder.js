@@ -72,7 +72,7 @@ export default function CreateOrder() {
                         
                     <div className="gen-dishes">
 
-                            <input type="text" placeholder="Dishes name" className="dishe-name"/>
+                            <input type="text" placeholder="Enter you order" className="dishe-name"/>
                             <input type="text" placeholder="unit" className="quantity"/>
                             
                             <button className="btn-add">
