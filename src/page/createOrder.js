@@ -66,16 +66,16 @@ export default function CreateOrder() {
                 </div>
                 <div className="form-create-order">
                     <label className="textLabel" id="lbl1">Order name</label>
-                    <input type="text" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
+                    <input type="text" id="txtin1" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
 
                     <label className="textLabel" id="lbl2">Restaurant name</label>
-                    <input type="text" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
+                    <input type="text" id="txtin2" className="textInput" value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
 
                     <label className="textLabel" id="lbl3">Pick up location</label>
-                    <input type="text" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
+                    <input type="text" id="txtin3" className="textInput" value={place} onChange={(e) => setPlace(e.target.value)}/>
 
                     <label className="textLabel" id="lbl4">Comment</label>
-                    <textarea value={comment} onChange={(e) => setComment(e.target.value)}/>
+                    <textarea id="txtarea" value={comment} onChange={(e) => setComment(e.target.value)}/>
 
                     <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
