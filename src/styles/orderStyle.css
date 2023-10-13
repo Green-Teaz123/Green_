@@ -28,20 +28,22 @@
 }
 
 .tag-order-dk{
-    margin-left: auto;
+    display:flex;
+    justify-content: center;
+    
 }
 
 .tag-order-dk h1{
     color: #445D48;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 30px 0px 30px 0;
 }
 
 .box-3 {
     border: 1px solid #445D48;
     height: 4px;
-    width: 1000px;
+    width: 1026px;
     background-color: #445D48;
     align-self: center;
     justify-content: baseline;
