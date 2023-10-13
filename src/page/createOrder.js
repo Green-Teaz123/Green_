@@ -80,8 +80,8 @@ export default function CreateOrder() {
                     <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
                         <div className="add-order-header">
-                            <p>Dishes</p>
-                            <p>quantity</p>
+                            <p id="p1">Dishes</p>
+                            <p id="p2">Quantity</p>
                         </div>
 
                             
