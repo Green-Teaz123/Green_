@@ -10,7 +10,7 @@ export default function King_louy() {
     return (
         <div>
             <div className="create-order">
-                <input type="submit" value="Create your meal +" onClick={to_the_next_package} className="only-indexmain-input"/>
+                <input type="submit" value="Create your meal +" className="only-indexmain-input" onClick={to_the_next_package} />
             </div>
             <OrderStyle />
 
