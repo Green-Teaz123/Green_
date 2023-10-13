@@ -129,17 +129,33 @@
 }
 
 @media only screen and (min-width : 1200px) {
+    .create-order{
+        width: 1200px;
+    }
+    .header-create-order{
+        width: 1200px;
+    }
+    .form-create-order{
+        width: 1200px;
+    }
     .create-order .header-create-order {
-        margin-right: -70%;
+        margin-right: -150%;
         margin-top: 1%;
     }
     .create-order .header-create-order p {
         font-size: 150%;
     }
     .create-order .header-create-order .btn {
-        margin-right: 10%;
+        margin-right: 75%;
     }
 
-     
-    
+    .create-order .form-create-order #lbl1{
+        margin-left: 60%;
+        font-size: 110%;
+    }
+    .create-order .form-create-order #txtin1{
+        margin-left: 60%;
+    }
+
+
 }
