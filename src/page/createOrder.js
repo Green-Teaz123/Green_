@@ -68,17 +68,6 @@ export default function CreateOrder() {
                     </button>
                 </div>
                 <div className="form-create-order">
-                    <label className="textLabel">Order name</label>
-                    <input type="text" className="textInput"  value={orderName} onChange={(e) => setOrderName(e.target.value)} />
-
-                    <label className="textLabel">Restaurant name</label>
-                    <input type="text" className="textInput"  value={res_name} onChange={(e) => setRes_name(e.target.value)}/>
-
-                    <label className="textLabel">Pick up location</label>
-                    <input type="text" className="textInput"  value={place} onChange={(e) => setPlace(e.target.value)} />
-
-                    <label className="textLabel">Comment</label>
-                    <textarea required value={comment} onChange={(e) => setComment(e.target.value)} />
                     <label className="textLabel" id="lbl1">Order name</label>
                     <input type="text" id="txtin1" className="textInput" value={orderName} onChange={(e) => setOrderName(e.target.value)}/>
 
@@ -93,17 +82,14 @@ export default function CreateOrder() {
 
                     <label className="textLabel" id="lbl5">Order</label>
                     <div className="add-order">
+                       
                         <div className="add-order-header">
                             <p id="p1">Dishes</p>
                             <p id="p2">Quantity</p>
                         </div>
-                        {items.map((item, index) => (
-                        <Dish key={index} dish={item.dish} quantity={item.quantity} />
-                        ))}
-
-                        <div className="order-success-add">   
+                        <div className="order-success-add">
                             {items.map((item, index) => (
-                            <Dish key={index} Dish={item.Dish} Quantity={item.Quantity} />
+                            <Dish key={index} dish={item.dish} quantity={item.quantity} />
                             ))}
                         </div>
 
