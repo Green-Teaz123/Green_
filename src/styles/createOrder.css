@@ -231,4 +231,10 @@
     .order-success-add {
         margin-top: -6%;
     }
+    .vl {
+        margin-left: 120%;
+        margin-top: -60%;
+        border-left: 6px solid gray;
+        height: 500px;
+      }
 }

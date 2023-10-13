@@ -90,8 +90,7 @@ export default function CreateOrder() {
                             ))}
                         </div>
 
-
-
+                    <div className="vl"></div>
 
                     </div>
                     <div className="gen-dishes">
