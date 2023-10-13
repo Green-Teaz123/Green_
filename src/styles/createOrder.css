@@ -169,6 +169,24 @@
         margin-left: 60%;
         width: 37%;
     }
-
+    .create-order .form-create-order #lbl3{
+        margin-left: 60%;
+        margin-top: 1%;
+        font-size: 110%;
+    }
+    .create-order .form-create-order #txtin3{
+        margin-left: 60%;
+        width: 37%;
+    }
+    .create-order .form-create-order #lbl4{
+        margin-left: 60%;
+        margin-top: 1%;
+        font-size: 110%;
+    }
+    .create-order .form-create-order #txtarea{
+        margin-left: 60%;
+        width: 37%;
+        height: 200px;
+    }
 
 }
