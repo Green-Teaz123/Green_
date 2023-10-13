@@ -1,3 +1,6 @@
+*{
+    color: #445D48;
+}
 .create-order{
     display: flex;
     align-items: center;
