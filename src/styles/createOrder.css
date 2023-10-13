@@ -139,16 +139,19 @@
         width: 1200px;
     }
     .create-order .header-create-order {
-        margin-right: -150%;
+        margin-right: -140%;
         margin-top: 1%;
     }
     .create-order .header-create-order p {
         font-size: 150%;
     }
     .create-order .header-create-order .btn {
-        margin-right: 75%;
+        margin-right: 70%;
     }
-
+    .create-order .header-create-order .btn svg {
+        width: 150%;
+        height: 150%;
+    }
     .create-order .form-create-order #lbl1{
         margin-left: 60%;
         font-size: 110%;
