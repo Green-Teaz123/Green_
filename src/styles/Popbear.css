@@ -1,0 +1,102 @@
+.popbear {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250%;
+    height: 50%;
+    background-color: #445D48; 
+    z-index: 1000;
+    border-radius: 50% / 100% 100% 0 0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bearImg {
+    position: absolute;
+    width: 40%;
+    bottom: 75%;
+    display: flex;
+}
+
+.popbear-show {
+    width: 30%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px 20px 5px 20px;
+}
+
+:is(.popbear-title, .popbear-name ) {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    height: 20px;
+    margin-bottom: 10px;
+}
+
+.popbear-title {
+    margin-left: 10px;
+}
+
+.popbear-title p {
+    margin:10px 10px 10px 0;
+    font-size: 24px;
+}
+
+.popbear-name {
+    margin-left: 20px;
+}
+
+.popbear-name p {
+    margin: 15px 10px 0 0;
+}
+
+.popbear-comment {
+    margin: 25px 0 0 20px ;
+}
+
+.popbear-comment  p{
+    margin-bottom: 10px;
+}
+
+.bear-com {
+    margin-top: 5px;
+    margin-right: 15px;
+    font-size: 12px;
+    color: #a0a9b1;
+}
+
+
+.pop-btn {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 30px 0 30px 0;
+} 
+
+:is(.bear-done, .bear-cancel) {
+    width: 100px;
+    height: 30px;
+    border: 1px solid #a0a9b1;
+    border-radius: 15px;
+    padding: 0 10px ;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0 15px ;
+    
+}
+
+.bear-done {
+    background-color: #445D48;
+}
+
+.bear-cancel {
+    background-color: #ff6262;
+}
+

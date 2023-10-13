@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate  , Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "../styles/Order.css";
 
 export default function Order() {
@@ -7,7 +7,7 @@ export default function Order() {
     
     useEffect(() => {
         // Make an API request when the component mounts
-        fetch("https://localhost:7263/api/getOrders")
+        fetch("https://localhost:5001/api/getOrders")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -38,7 +38,7 @@ export default function Order() {
         
     }
     return (
-            <div className="order"  >
+            <div className="order-box"  >
                 {orders.map(order => (               
                     <div className="didnt-pick" key={order.id} onClick={()=> to_the_next_package(order.id ,order.orderName, order.res_name, order.place, order.comment)}  >
                         <div className="order-header" >
