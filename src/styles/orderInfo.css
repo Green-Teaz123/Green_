@@ -1,6 +1,5 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    overflow: hidden;
 }
 
 
@@ -95,7 +94,7 @@ body{
     width: 300px;
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
 }
 
 
@@ -118,14 +117,18 @@ body{
 
 .pick-up {
     display: grid;
+    /* justify-content: center; */
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     align-items: end;
+    /* margin-top: 30px; */
 }
 
 .pick-up input{
     align-self: self-start;
     justify-self: center;
+    width: fit-content;
+    height: fit-content;
 }
 
 .pick-order {
@@ -137,4 +140,3 @@ body{
     font-weight: bold;
     color: #445D48;
 }
-
