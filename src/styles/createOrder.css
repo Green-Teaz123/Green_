@@ -299,4 +299,7 @@
         margin-left: 22%;
         font-weight: bold;
     }
+    .order-success-add {
+        margin-top: -10%;
+    }
 }
