@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/dishe.css";
 
-export default function Dish(props) {
+export default function Dish({Dish, Quantity}) {
     return (
         <div className="order-list-item">
             <div className="order-item">
@@ -13,12 +13,12 @@ export default function Dish(props) {
                     </button>   
 
                     {/* insert dishes name here  */}
-                    <p>food_1</p>
+                    <p>{Dish}</p>
 
                 </div>
 
                 {/* insert quantity here */}
-                <p>1</p>
+                <p>{Quantity}</p>
 
             </div>
         </div>
