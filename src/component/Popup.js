@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
 
-export default function Popup({ closePopup, orderName, openBear }, props ) {
+export default function Popup({ closePopup, orderName,}, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("")
     const checkInput = () => {
