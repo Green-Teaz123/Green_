@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Popup from "../component/Popup";
 import "../styles/orderInfo.css";
 import { useLocation } from "react-router-dom";
+import Popbear from "../component/Popbear";
 
 
 
