@@ -25,7 +25,7 @@ export default function OrderInfo() {;
     }
 
     useEffect(() => { 
-        fetch("https://localhost:7263/api/getOrder/"+props.id)
+        fetch("https://localhost:5001/api/getOrder/"+props.id)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
