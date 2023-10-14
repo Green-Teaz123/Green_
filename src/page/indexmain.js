@@ -8,6 +8,8 @@ export default function King_louy() {
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/create";
     }
+
+    
     return (
         <div>
             <div className="box-index">

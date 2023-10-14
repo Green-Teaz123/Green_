@@ -3,5 +3,16 @@
     height: 120px;
     background-color: #445D48; 
     border-radius: 50% / 100% 100% 0 0;
-    margin: 10px 0px -10px 0px;
+    margin: 10px 0px -10px 0px;    
+    position: fixed;
+    bottom: -30px;
+    left: 0;
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .huge-dot {
+        bottom: -40px;
+    }
+    
 }

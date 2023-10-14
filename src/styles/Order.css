@@ -6,7 +6,23 @@
     background-color: #F6FFDE;
 }
 
-.order-box p{
+.gray-scale {
+    color: #69747E;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    padding-left: 10px;
+}
+
+.res-lo-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: fit-content;
+    margin: 0px;
+}
+
+.order-box {
     color: #445D48;
     font-size: 14px;
     font-weight: lighter;
@@ -22,21 +38,35 @@
     align-items: center;
 }
 
-.order-header {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
-    margin: 10px;
+@media screen and (min-width: 800px) {
+    .order-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-    .order-box p {
-        color: red;
-    }
-    
     .order-box {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    
+    .box-index {
+        display: grid;
+    }
+
+    .create-order-btn {
+        width: fit-content;
+        height: fit-content;
+        align-self: end;
+        position: fixed;
+    }
+
+    .create-order-btn .btn {
+        position: fixed;
+
+    }
+    .didnt-pick{
+        width: fit-content;
     }
 }
