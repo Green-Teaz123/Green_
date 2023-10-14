@@ -2,10 +2,9 @@ import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
 
-export default function Popup({ closePopup, orderName }, props ) {
+export default function Popup({ closePopup, orderName, openBear }, props ) {
     const [deliveryName, setDeliveryName] = useState("");
-    const [deliveryComment, setDeliveryComment] = useState("");
-
+    const [deliveryComment, setDeliveryComment] = useState("")
     const checkInput = () => {
         if (deliveryName !== "" && deliveryComment !== "") {
             document.querySelector(".popup-footer input").disabled = false;
@@ -20,16 +19,16 @@ export default function Popup({ closePopup, orderName }, props ) {
         checkInput();
     }
 
-    const to_the_next_package = () => {
-        window.location.href = "http://localhost:3000/orderInfo";
-    }
+    // const to_the_next_package = () => {
+    //     console.log("pick it");
+    //     // window.location.href = "http://localhost:3000/orderInfo";
+    // }
 
     return (
         <div className="popup">
             <div className="popup-header">
                 <div className="popup-title">
                     <p>Order : {orderName}</p>
-                    {/* <p>{orderName}</p> */}
                 </div>
                 <div> 
                     <button className="button-cancle" onClick={closePopup}>
@@ -45,7 +44,7 @@ export default function Popup({ closePopup, orderName }, props ) {
                     <label>comment</label>
                     <textarea className="deliveryComment" onChange={()=>handleDeliveryANDcomment} />
                 <div className="popup-footer">
-                    <input type="submit" value="Pick it" onClick={to_the_next_package} />
+                    <input type="submit" value="Pick it"  onClick={closePopup} />
                 </div>
             </div>
         </div>
