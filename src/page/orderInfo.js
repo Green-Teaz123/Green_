@@ -11,6 +11,7 @@ import  Popbear from "../component/Popbear";
 
 export default function OrderInfo() {;
     const [isPopupVisible, setPopupVisible] = useState(false);
+    const [isPopupBear , setPopupBear] = useState(false);
     const location = useLocation();
     const [orders, setOrders] = useState([]);
     const props = location.state;
@@ -21,6 +22,7 @@ export default function OrderInfo() {;
 
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/";
+        console.log("to_the_next_package");
     }
 
     useEffect(() => { 
@@ -58,8 +60,10 @@ export default function OrderInfo() {;
             bodyBG.style.backgroundColor = "white";
             bodyBG.style.overflow = "auto";
             boxOfOrderInfo.style.filter = "blur(0px)";
+            setPopupBear(true);
         }
     };
+
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
@@ -107,7 +111,7 @@ export default function OrderInfo() {;
                         {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
                         {/* insert Order  here */}
 
-                       {<Popbear OrderId={props.id}/>}
+                    {/* {<Popbear OrderId={props.id}/>} */}
                         
                         <div className="OrderEnd">
                             <p className="endLiner"></p>
@@ -117,12 +121,10 @@ export default function OrderInfo() {;
                     <div className="pick-up" >
                         <input type="submit" value="Pick it up" className="pick-order" onClick={togglePopup}/>
                         <Huge />
-
                     </div>
-                    
                 </div>
             {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}/>}
-            {/* <Popup  /> */}
+            {isPopupBear && <Popbear OrderId={props.id}/>}
         </div>
 
     )
