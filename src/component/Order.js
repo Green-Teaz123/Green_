@@ -51,7 +51,7 @@ export default function Order() {
                         <div className="res-lo-header">
                             <p className="res-lo-header">STATUS:  </p>
                             <p className={order.isgrab ? "green-text" : "red-text"}>
-                                 {order.isgrab ? "grabbed" : "not grabbed"}
+                                {order.isgrab ? "grabbed" : "not grabbed"}
                             </p>
                             </div>
                     </div>
