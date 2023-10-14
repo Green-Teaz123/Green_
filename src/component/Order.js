@@ -6,7 +6,7 @@ export default function Order() {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
-        fetch("https://localhost:5001/api/getOrders")
+        fetch("https://localhost:7263/api/getOrders")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
