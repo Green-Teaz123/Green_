@@ -4,9 +4,10 @@
 .create-order{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     margin-top: 10px;
+    margin: auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -33,6 +34,7 @@
 
 .form-create-order {
     display: flex;
+    justify-content: center;
     flex-direction: column;
 
 }
@@ -127,19 +129,18 @@
     margin-top: 15px;
     margin-bottom: 35px;
 }
-
 @media only screen and (min-width : 1200px) {
     .create-order{
         width: 1200px;
     }
     .header-create-order{
-        width: 1200px;
+        width: 1100px;
     }
     .form-create-order{
         width: 1200px;
     }
     .create-order .header-create-order {
-        margin-right: -144%;
+        margin-right: -134%;
         margin-top: 1%;
     }
     .create-order .header-create-order p {
@@ -189,13 +190,13 @@
         height: 200px;
     }
     .create-order .form-create-order #lbl5{
-        margin-left: 20%;
+        margin-left: 17%;
         margin-top: -45%;
         font-size: 150%;
     }
     .add-order{
         margin-top: 7%;
-        margin-left: 5%;
+        margin-left: 2%;
         width: 40%;
         height: 420px;
     }
@@ -210,7 +211,7 @@
         font-size: 100%;
     }
     .gen-dishes .dishe-name{
-        margin-left: 5%;
+        margin-left: 2%;
         margin-top: -80%;
         width: 28%;
     }
@@ -239,8 +240,10 @@
       }
 }
 
+
 @media only screen and (min-width: 1700px){
     .create-order{
+
         width: 1700px;
     }
     .header-create-order{
@@ -272,8 +275,8 @@
         height: 75vh;
     }
     .add-order{
-        margin-top: 5%;
-        margin-left: 5%;
+        margin-top: 6%;
+        margin-left: 2%;
         width: 40%;
         height: 420px;
     }
@@ -296,7 +299,7 @@
     }
     .create-order .form-create-order #lbl5{
         margin-top: -33%;
-        margin-left: 22%;
+        margin-left: 19%;
         font-weight: bold;
     }
     .order-success-add {
