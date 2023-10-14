@@ -114,7 +114,6 @@ export default function OrderInfo() {;
                         <div className="order-detail">
                                 <h4>Pick up location :</h4>
                                 <p>{orders.place}</p>
-                                
                         </div>
 
                         <div className="comment">
@@ -123,14 +122,19 @@ export default function OrderInfo() {;
                         </div>
                     </div>
                     <div className="order" >
-                        <OrderStyle />
-                        <div className="order-header">
+                            <div className="assetOrder">
+                                <OrderStyle />
+                            </div>
+                        <div className="order-header1">
                             <p>Order Name</p>
                             <p>Quantity</p>
                         </div>
 
-                        {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
-                        {/* insert Order  here */}
+                        <div className="show-dishe">
+                            {console.log(orders.items)}
+                            {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
+                            {/* insert Order  here */}
+                        </div>
                         
                         <div className="OrderEnd">
                             <p className="endLiner"></p>
@@ -139,8 +143,10 @@ export default function OrderInfo() {;
 
                     <div className="pick-up" >
                         <input type="submit" value="Pick it up" className="pick-order" onClick={togglePopup}/>
-                        <Huge />
+                    </div>
 
+                    <div className="asset">
+                        <Huge />
                     </div>
                     
                 </div>
