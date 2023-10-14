@@ -90,7 +90,7 @@ body{
     flex-direction: column;
     /* padding: 10px; */
 }
-.order-header {
+.order-header1 {
     height: 30px;
     width: 300px;
     display: flex;
@@ -141,6 +141,7 @@ body{
     font-weight: bold;
     color: #445D48;
 }
+
 
 
 @media only screen and (min-width : 1200px) { 
