@@ -39,11 +39,11 @@
 
 @media only screen and (min-width: 600px) {
     .box-index {
-        margin: auto;
         display: grid;
+        /* margin: auto;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
-        grid-gap: 20px;
+        grid-gap: 20px; */
     }
     
     .box-order{
