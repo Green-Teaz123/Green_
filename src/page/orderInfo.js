@@ -80,6 +80,11 @@ export default function OrderInfo() {;
         setDeliveryComment(data2);
     }
 
+    const closeBear = () => {
+        setPopbear(false);
+        console.log("close bear");
+    }
+
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
@@ -140,7 +145,7 @@ export default function OrderInfo() {;
                     
                 </div>
             {isPopupVisible && <Popup  closePopup={togglePopup}  orderName={orderName}  OrderId={props.id} checkbear={checkbear} getData={handleDatafromPopup}/>}
-            {isPopbear && <Popbear  Id={props.id} name={orderName} picker={deliveryName} comment={deliveryComment} />}
+            {isPopbear && <Popbear  Id={props.id} name={orderName} picker={deliveryName} comment={deliveryComment} closePopupBear={closeBear} />}
             {/* <Popup  /> */}
         </div>
 
