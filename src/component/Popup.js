@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../styles/Popup.css";
 
 
-export default function Popup({ closePopup, orderName,}, props ) {
+export default function Popup({ closePopup, orderName, checkbear, getData}, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
@@ -55,7 +55,7 @@ export default function Popup({ closePopup, orderName,}, props ) {
                     <label>comment</label>
                     <textarea className="deliveryComment" onChange={handleDeliverycomment} />
                 <div className="popup-footer">
-                    <input type="submit" value="Pick it" onClick={closePopup}  />
+                <input type="submit" value="Pick it" onClick={() => { closePopup(); getData(deliveryName); }} />
                 </div>
             </div>
         </div>

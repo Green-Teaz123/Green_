@@ -6,7 +6,8 @@ import { useState, useEffect } from "react";
 import Popup from "../component/Popup";
 import "../styles/orderInfo.css";
 import { useLocation } from "react-router-dom";
-import Popbear from "../component/Popbear";
+import  Popbear from "../component/Popbear";
+
 
 
 
@@ -18,7 +19,7 @@ export default function OrderInfo() {;
     const [isPopbear , setPopbear] = useState(false);
     // const id = props.id;
     const orderName = props.orderName;
-    const [bearcheck , setBear] = useState(false);
+    const [deliveryName, setDeliveryName] = useState("");
     // console.log('orderName in YourComponent:', orderName);
 
 
@@ -70,6 +71,13 @@ export default function OrderInfo() {;
         setPopbear(false);
         console.log("close popup");
     }
+
+    const handleDatafromPopup = (data) => {
+        console.log('DATA IS ',data);
+        console.log("get data from popup");
+        setDeliveryName(data);
+    }
+
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
@@ -129,8 +137,8 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup  closePopup={togglePopup}  orderName={orderName}  OrderId={props.id} checkbear={checkbear}/>}
-            {isPopbear && <Popbear  Id={props.id} name={orderName} />}
+            {isPopupVisible && <Popup  closePopup={togglePopup}  orderName={orderName}  OrderId={props.id} checkbear={checkbear} getData={handleDatafromPopup}/>}
+            {isPopbear && <Popbear  Id={props.id} name={orderName} picker={deliveryName} />}
             {/* <Popup  /> */}
         </div>
 

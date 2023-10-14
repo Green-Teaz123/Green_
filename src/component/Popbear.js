@@ -1,11 +1,9 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import "../styles/Popbear.css";
 
 
 
-export default function Popbear(order) {
-    var name = order.name
-    var Id = order.Id;
+export default function Popbear({picker,name,Id},order) {
     var comment = order.s_comment
     console.log(order)
     function isGrabTrue() {
@@ -100,8 +98,7 @@ export default function Popbear(order) {
                     </div>
 
                     <div className="popbear-name">
-                        <p>Picker Name :</p>
-                        <p>xxx xxxxxx</p>
+                        <p>Picker Name : {picker}</p>
                     </div>
 
 
