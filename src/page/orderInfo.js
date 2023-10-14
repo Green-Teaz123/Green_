@@ -16,7 +16,7 @@ export default function OrderInfo() {;
     const props = location.state;
     // const id = props.id;
     const orderName = props.orderName;
-    console.log('orderName in YourComponent:', orderName);
+    // console.log('orderName in YourComponent:', orderName);
 
 
     const to_the_next_package = () => {
@@ -24,7 +24,7 @@ export default function OrderInfo() {;
     }
 
     useEffect(() => { 
-        fetch("https://localhost:5001/api/getOrder/"+props.id)
+        fetch("https://localhost:7263/api/getOrder/"+props.id)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -106,8 +106,6 @@ export default function OrderInfo() {;
 
                         {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
                         {/* insert Order  here */}
-
-                       {<Popbear OrderId={props.id}/>}
                         
                         <div className="OrderEnd">
                             <p className="endLiner"></p>
@@ -121,7 +119,7 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}/>}
+            {isPopupVisible && <Popup  closePopup={togglePopup} orderName={orderName} comment={orders.comment} OrderId={props.id}/>}
             {/* <Popup  /> */}
         </div>
 

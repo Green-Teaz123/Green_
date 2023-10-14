@@ -40,7 +40,7 @@ export default function CreateOrder() {
             alert("Please fill in all fields.");
             return;
         }
-        fetch('https://localhost:5001/api/create', {
+        fetch('https://localhost:7263/api/create', {
             method: 'POST',
             headers: {"content-type": "application/json"},
             body: JSON.stringify({

@@ -3,9 +3,11 @@ import "../styles/Popbear.css";
 
 
 
-export default function Popbear(orderId) {
-    var orderId = orderId.OrderId;
-
+export default function Popbear(order) {
+    var name = order.name
+    var Id = order.Id;
+    var comment = order.s_comment
+    console.log(order)
     function isGrabTrue() {
         const requestOptions = {
             method: 'PUT',
@@ -29,7 +31,7 @@ export default function Popbear(orderId) {
             })
           };
           
-          fetch(`https://localhost:5001/api/isGrabTrue/${orderId}`, requestOptions)
+          fetch(`https://localhost:7263/api/isGrabTrue/${Id}`, requestOptions)
             .then((response) => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -37,7 +39,7 @@ export default function Popbear(orderId) {
               return response.json();
             })
             .then((data) => {
-              console.log(data)
+              console.log(data.isGrab)
             })
             .catch((error) => {
               console.error('Error fetching data:', error);
@@ -68,7 +70,7 @@ export default function Popbear(orderId) {
             })
           };
           
-          fetch(`https://localhost:5001/api/isGrabFalse/${orderId}`, requestOptions)
+          fetch(`https://localhost:7263/api/isGrabFalse/${Id}`, requestOptions)
             .then((response) => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -76,7 +78,7 @@ export default function Popbear(orderId) {
               return response.json();
             })
             .then((data) => {
-                console.log(data)
+                console.log(data.isGrab)
               })
             .catch((error) => {
               console.error('Error fetching data:', error);
@@ -89,7 +91,7 @@ export default function Popbear(orderId) {
                 <div className="popbear-show">
                     <div className="popbear-title">
                         <p>Order :</p>
-                        <p>xxx xxxxxx</p>
+                        <p>{name}</p>
                     </div>
 
                     <div className="popbear-name">
@@ -100,11 +102,9 @@ export default function Popbear(orderId) {
 
                     <div className="popbear-comment">
                         <p>comment :</p>
-                        <p className="bear-com">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eu ultrices vitae auctor eu augue. Sollicitudin tempor id eu nisl nunc mi ipsum faucibus vitae.</p>
+                        <p className="bear-com">{comment}</p>
                     </div>
 
-
-                    
                     <div className="pop-btn">
                         <input type="submit" value="Done" className="bear-done" onClick={isGrabTrue} />
                         <input type="submit" value="Cancel" className="bear-cancel" onClick={isGrabFalse}/>

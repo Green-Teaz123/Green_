@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
+import Popbear from "./Popbear";
 
-export default function Popup({ closePopup, orderName }, props ) {
+export default function Popup({ closePopup, orderName,OrderId,comment }, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
@@ -21,7 +22,8 @@ export default function Popup({ closePopup, orderName }, props ) {
     }
 
     const to_the_next_package = () => {
-        window.location.href = "http://localhost:3000/orderInfo";
+        closePopup();
+        <Popbear name={orderName} s_comment={comment} Id={OrderId}/>
     }
 
     return (
