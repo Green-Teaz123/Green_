@@ -121,8 +121,8 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup  closePopup={togglePopup} orderName={orderName} comment={orders.comment} OrderId={props.id}/>}
-            {isPopbear && <Popbear  OrderId={props.id}/>}
+            {isPopupVisible && <Popup  closePopup={togglePopup} orderName={orderName}  OrderId={props.id}/>}
+            {isPopbear && <Popbear  Id={props.id} name={orderName} />}
             {/* <Popup  /> */}
         </div>
 

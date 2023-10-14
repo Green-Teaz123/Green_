@@ -7,19 +7,29 @@ export default function Popup({ closePopup, orderName, comment, OrderId}, props 
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
+
     const checkInput = () => {
         if (deliveryName !== "" && deliveryComment !== "") {
             document.querySelector(".popup-footer input").disabled = false;
         } else {
             document.querySelector(".popup-footer input").disabled = true;
         }
+
     };
 
-    const handleDeliveryANDcomment= (e) => {
-        setDeliveryName(e.target.value);
+    const handleDeliverycomment= (e) => {
         setDeliveryComment(e.target.value);
         checkInput();
+
     }
+
+    const handleDeliveryName= (e) => {
+        setDeliveryName(e.target.value);
+        checkInput();
+    }
+    
+
+    console.log(deliveryName,deliveryComment);
 
     // const to_the_next_package = () => {
     //     closePopup();
@@ -31,7 +41,6 @@ export default function Popup({ closePopup, orderName, comment, OrderId}, props 
             <div className="popup-header">
                 <div className="popup-title">
                     <p>Order : {orderName}</p>
-                    {/* <p>{orderName}</p> */}
                 </div>
                 <div> 
                     <button className="button-cancle" onClick={closePopup}>
@@ -43,9 +52,9 @@ export default function Popup({ closePopup, orderName, comment, OrderId}, props 
             </div>
             <div className="popup-inner">
                     <label>Delivery Name</label>
-                    <input type="text"  className="deliveryName" onChange={ ()=>handleDeliveryANDcomment} />
+                    <input type="text" className="deliveryName" onChange={handleDeliveryName} />
                     <label>comment</label>
-                    <textarea className="deliveryComment" onChange={()=>handleDeliveryANDcomment} />
+                    <textarea className="deliveryComment" onChange={handleDeliverycomment} />
                 <div className="popup-footer">
                     <input type="submit" value="Pick it" onClick={closePopup} />
                 </div>
