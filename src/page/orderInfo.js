@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Popup from "../component/Popup";
 import "../styles/orderInfo.css";
 import { useLocation } from "react-router-dom";
+import  Popbear from "../component/Popbear";
 
 
 export default function OrderInfo() {;
@@ -32,10 +33,9 @@ export default function OrderInfo() {;
                 // if (data === null) {
                 //     window.location.href = "http://localhost:3000/";
                 // }
+
                 document.cokkie = data;
                 // console.log(data.items.length);
-                
-                console.log(orders.items[3].dish)
             })
             .catch(error => {
                 console.error("Error fetching orders:", error);
@@ -100,9 +100,11 @@ export default function OrderInfo() {;
                             <p>Order Name</p>
                             <p>Quantity</p>
                         </div>
-                        {console.log(orders.items)}
+
                         {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
                         {/* insert Order  here */}
+
+                       {<Popbear OrderId={props.id}/>}
                         
                         <div className="OrderEnd">
                             <p className="endLiner"></p>
