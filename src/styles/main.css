@@ -41,7 +41,18 @@
     transition: 200ms;
 }
 
-@media only screen and (min-width: 600px) {
+@media screen  and (min-width: 1800px){
+    .box-index p{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .order-box {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 600px) {
     .box-index {
         display: grid;
     }
@@ -67,7 +78,7 @@
     }
 
 }
-@media only screen and (max-width: 599px) {
+@media screen and (max-width: 599px) {
     .create-order-btn{
         display: none;
     }
