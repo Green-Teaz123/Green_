@@ -20,6 +20,7 @@ export default function OrderInfo() {;
     // const id = props.id;
     const orderName = props.orderName;
     const [deliveryName, setDeliveryName] = useState("");
+    const [deliveryComment, setDeliveryComment] = useState("");
     // console.log('orderName in YourComponent:', orderName);
 
 
@@ -72,10 +73,11 @@ export default function OrderInfo() {;
         console.log("close popup");
     }
 
-    const handleDatafromPopup = (data) => {
-        console.log('DATA IS ',data);
+    const handleDatafromPopup = (data1,data2) => {
+        console.log('DATA IS ',data1,data2);
         console.log("get data from popup");
-        setDeliveryName(data);
+        setDeliveryName(data1);
+        setDeliveryComment(data2);
     }
 
 
@@ -138,7 +140,7 @@ export default function OrderInfo() {;
                     
                 </div>
             {isPopupVisible && <Popup  closePopup={togglePopup}  orderName={orderName}  OrderId={props.id} checkbear={checkbear} getData={handleDatafromPopup}/>}
-            {isPopbear && <Popbear  Id={props.id} name={orderName} picker={deliveryName} />}
+            {isPopbear && <Popbear  Id={props.id} name={orderName} picker={deliveryName} comment={deliveryComment} />}
             {/* <Popup  /> */}
         </div>
 

@@ -55,7 +55,7 @@ export default function Popup({ closePopup, orderName, checkbear, getData}, prop
                     <label>comment</label>
                     <textarea className="deliveryComment" onChange={handleDeliverycomment} />
                 <div className="popup-footer">
-                <input type="submit" value="Pick it" onClick={() => { closePopup(); getData(deliveryName); }} />
+                <input type="submit" value="Pick it" onClick={() => { closePopup(); getData(deliveryName,deliveryComment); }} />
                 </div>
             </div>
         </div>

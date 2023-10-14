@@ -3,8 +3,7 @@ import "../styles/Popbear.css";
 
 
 
-export default function Popbear({picker,name,Id},order) {
-    var comment = order.s_comment
+export default function Popbear({picker,name,Id,comment},order) {
     console.log(order)
     function isGrabTrue() {
         const requestOptions = {
