@@ -17,6 +17,7 @@ export default function OrderInfo() {;
     const [isPopbear , setPopbear] = useState(false);
     // const id = props.id;
     const orderName = props.orderName;
+    const [bearcheck , setBear] = useState(false);
     // console.log('orderName in YourComponent:', orderName);
 
 
@@ -56,12 +57,18 @@ export default function OrderInfo() {;
             bodyBG.style.overflow = "hidden";
             boxOfOrderInfo.style.filter = "blur(5px)";
         } else {
+            setPopbear(true);
             bodyBG.style.backgroundColor = "white";
             bodyBG.style.overflow = "auto";
             boxOfOrderInfo.style.filter = "blur(0px)";
-            setPopbear(true);
         }
     };
+
+    const checkbear = (e) => {
+        setPopupVisible(false);
+        setPopbear(false);
+        console.log("close popup");
+    }
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
@@ -121,7 +128,7 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup  closePopup={togglePopup} orderName={orderName}  OrderId={props.id}/>}
+            {isPopupVisible && <Popup  closePopup={togglePopup}  orderName={orderName}  OrderId={props.id} checkbear={checkbear}/>}
             {isPopbear && <Popbear  Id={props.id} name={orderName} />}
             {/* <Popup  /> */}
         </div>
