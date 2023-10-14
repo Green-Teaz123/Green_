@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
-import Popbear from "./Popbear";
 
 
 export default function Popup({ closePopup, orderName,}, props ) {
@@ -22,10 +21,10 @@ export default function Popup({ closePopup, orderName,}, props ) {
         checkInput();
     }
 
-    const to_the_next_package = () => {
-        closePopup();
-        <Popbear name={orderName} s_comment={comment} Id={OrderId}/>
-    }
+    // const to_the_next_package = () => {
+    //     closePopup();
+    //     <Popbear name={orderName} s_comment={comment} Id={OrderId}/>
+    // }
 
     return (
         <div className="popup">
@@ -48,7 +47,7 @@ export default function Popup({ closePopup, orderName,}, props ) {
                     <label>comment</label>
                     <textarea className="deliveryComment" onChange={()=>handleDeliveryANDcomment} />
                 <div className="popup-footer">
-                    <input type="submit" value="Pick it" onClick={to_the_next_package} />
+                    <input type="submit" value="Pick it" onClick={closePopup} />
                 </div>
             </div>
         </div>
