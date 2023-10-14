@@ -32,10 +32,12 @@
 }
 
 .green-text{
+    margin-left: 10px;
     color: green;
 }
 
 .red-text{
+    margin-left: 10px;
     color: red;
 }
 
