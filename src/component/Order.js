@@ -6,7 +6,7 @@ export default function Order() {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
-        fetch("https://localhost:7263/api/getOrders")
+        fetch("https://localhost:5001/api/getOrders")
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -51,11 +51,7 @@ export default function Order() {
                         <div className="res-lo-header">
                             <p className="res-lo-header">STATUS:  </p>
                             <p className={order.isgrab ? "green-text" : "red-text"}>
-<<<<<<< HEAD
-                                 {order.isgrab ? "GRABBED" : "NOT GRABBED"}
-=======
-                                {order.isgrab ? "grabbed" : "not grabbed"}
->>>>>>> 65d3c0046eafc15cc12c83d3720a5367c6065cd5
+                                {order.isgrab ? "GRABBED" : "NOT GRABBED"}
                             </p>
                             </div>
                     </div>
