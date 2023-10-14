@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../styles/Popup.css";
 
 
-export default function Popup({ closePopup, orderName,}, props ) {
+export default function Popup({ closePopup, orderName, comment, OrderId}, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
