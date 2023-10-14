@@ -1,9 +1,87 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "../styles/Popbear.css";
 
 
 
-export default function Popbear() {
+export default function Popbear(orderId) {
+    var orderId = orderId.OrderId;
+
+    function isGrabTrue() {
+        const requestOptions = {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'accept': '*',
+            },
+            body: JSON.stringify({
+              "_id": {},
+              "orderName": "string",
+              "res_name": "string",
+              "place": "string",
+              "comment": "string",
+              "isGrab": true,
+              "items": [
+                {
+                  "dish": "string",
+                  "quantity": 0
+                }
+              ]
+            })
+          };
+          
+          fetch(`https://localhost:5001/api/isGrabTrue/${orderId}`, requestOptions)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then((data) => {
+              console.log(data)
+            })
+            .catch((error) => {
+              console.error('Error fetching data:', error);
+            });
+      }
+
+
+      function isGrabFalse() {
+        const requestOptions = {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+              'accept': '*',
+            },
+            body: JSON.stringify({
+              "_id": {},
+              "orderName": "string",
+              "res_name": "string",
+              "place": "string",
+              "comment": "string",
+              "isGrab": true,
+              "items": [
+                {
+                  "dish": "string",
+                  "quantity": 0
+                }
+              ]
+            })
+          };
+          
+          fetch(`https://localhost:5001/api/isGrabFalse/${orderId}`, requestOptions)
+            .then((response) => {
+              if (!response.ok) {
+                throw new Error('Network response was not ok');
+              }
+              return response.json();
+            })
+            .then((data) => {
+                console.log(data)
+              })
+            .catch((error) => {
+              console.error('Error fetching data:', error);
+            });
+      }
     return (
         <div>
             <div className="popbear">
@@ -28,8 +106,8 @@ export default function Popbear() {
 
                     
                     <div className="pop-btn">
-                        <input type="submit" value="Done" className="bear-done" />
-                        <input type="submit" value="Cancel" className="bear-cancel" />
+                        <input type="submit" value="Done" className="bear-done" onClick={isGrabTrue} />
+                        <input type="submit" value="Cancel" className="bear-cancel" onClick={isGrabFalse}/>
                     </div>
                     
                 </div>

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Popup from "../component/Popup";
 import "../styles/orderInfo.css";
 import { useLocation } from "react-router-dom";
+import  Popbear from "../component/Popbear";
 
 
 export default function OrderInfo() {;
@@ -15,6 +16,9 @@ export default function OrderInfo() {;
     const props = location.state;
     // const id = props.id;
     const orderName = props.orderName;
+    console.log('orderName in YourComponent:', orderName);
+
+
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/";
     }
@@ -32,10 +36,9 @@ export default function OrderInfo() {;
                 // if (data === null) {
                 //     window.location.href = "http://localhost:3000/";
                 // }
+
                 document.cokkie = data;
                 // console.log(data.items.length);
-                
-                console.log(orders.items[3].dish)
             })
             .catch(error => {
                 console.error("Error fetching orders:", error);
@@ -60,9 +63,9 @@ export default function OrderInfo() {;
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
-          <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
+        <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
         ));
-      };
+    };
 
     return (
         <div className="box-of-order-info">
@@ -100,9 +103,11 @@ export default function OrderInfo() {;
                             <p>Order Name</p>
                             <p>Quantity</p>
                         </div>
-                        {console.log(orders.items)}
+
                         {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
                         {/* insert Order  here */}
+
+                       {<Popbear OrderId={props.id}/>}
                         
                         <div className="OrderEnd">
                             <p className="endLiner"></p>
@@ -116,9 +121,8 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}  />}
+            {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}/>}
             {/* <Popup  /> */}
-
         </div>
 
     )
