@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "../styles/Popup.css";
 
-export default function Popup({ closePopup }, props ) {
+export default function Popup({ closePopup, orderName }, props ) {
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
 
@@ -28,8 +28,8 @@ export default function Popup({ closePopup }, props ) {
         <div className="popup">
             <div className="popup-header">
                 <div className="popup-title">
-                    <p>Order :</p>
-                    <p>{props.orderName}</p>
+                    <p>Order : {orderName}</p>
+                    {/* <p>{orderName}</p> */}
                 </div>
                 <div> 
                     <button className="button-cancle" onClick={closePopup}>
