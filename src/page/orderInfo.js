@@ -15,6 +15,9 @@ export default function OrderInfo() {;
     const props = location.state;
     // const id = props.id;
     const orderName = props.orderName;
+    console.log('orderName in YourComponent:', orderName);
+
+
     const to_the_next_package = () => {
         window.location.href = "http://localhost:3000/";
     }
@@ -60,9 +63,9 @@ export default function OrderInfo() {;
 
     const loopOrder = (len_items) => {
         return orders.items.map((item, index) => (
-          <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
+        <MenuOrder key={index} dish={item.dish} quantity={item.quantity} />
         ));
-      };
+    };
 
     return (
         <div className="box-of-order-info">
@@ -116,9 +119,8 @@ export default function OrderInfo() {;
                     </div>
                     
                 </div>
-            {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}  />}
+            {isPopupVisible && <Popup closePopup={togglePopup} orderName={orderName}/>}
             {/* <Popup  /> */}
-
         </div>
 
     )
