@@ -188,7 +188,6 @@ body{
 
     .pick-up {
         margin-top: 50px;
-        scale: 1.4;
         grid-area: 3 / 2 / 4 / 3;
     }
 
