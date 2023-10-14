@@ -44,14 +44,16 @@ export default function Order() {
                             <h2 >Order name: {order.orderName}</h2>
 
                             <div  >
-                                <svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    {/* Your SVG content */}
-                                </svg>
                             </div>
                         </div>
                         <div className="res-lo-header"> <p className="res-lo-header">Restaurant name: </p> <p className="gray-scale">{order.res_name}</p> </div>
                         <div className="res-lo-header"> <p className="res-lo-header">Pick up location: </p> <p className="gray-scale">{order.place}</p> </div>
-                        <div className="res-lo-header"> <p className="res-lo-header">STATUS: </p> <p className="gray-scale">{(order.isgrab.toString())}</p> </div>
+                        <div className="res-lo-header">
+                            <p className="res-lo-header">STATUS:  </p>
+                            <p className={order.isgrab ? "green-text" : "red-text"}>
+                                 {order.isgrab ? "grabbed" : "not grabbed"}
+                            </p>
+                            </div>
                     </div>
                 ))}
             </div>
