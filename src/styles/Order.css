@@ -43,7 +43,20 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .create-order-btn {
+        width: fit-content;
+        height: fit-content;
+        align-self: end;
+        position: fixed;
+    }
+    
+    .create-order-btn .btn {
+        position: relative;
+
+    }
 }
+
 
 @media screen and (min-width: 1200px) {
     .order-box {
@@ -55,17 +68,7 @@
         display: grid;
     }
 
-    .create-order-btn {
-        width: fit-content;
-        height: fit-content;
-        align-self: end;
-        position: fixed;
-    }
 
-    .create-order-btn .btn {
-        position: fixed;
-
-    }
     .didnt-pick{
         width: fit-content;
     }
