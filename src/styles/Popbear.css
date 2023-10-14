@@ -25,7 +25,7 @@
 
 .popbear-show {
     width: 30%;
-    height: 80%;
+    height: 65%;
     background-color: white;
     border-radius: 15px;
     padding: 20px 20px 5px 20px;
@@ -92,6 +92,13 @@
     
 }
 
+
+.bear-close {
+    border: none;
+    background-color: transparent;
+    margin-left: 250px;
+}
+
 .bear-done {
     background-color: #445D48;
 }
@@ -100,3 +107,43 @@
     background-color: #ff6262;
 }
 
+@media only screen and (min-width : 1200px) {
+
+    .bearImg {
+        width: 20%;
+        bottom: 70%;
+    }
+
+    .popbear-show {
+        width: 15%;
+        height: 80%;
+    }
+
+    .bear-close {
+        border: none;
+        scale: 1.2;
+        background-color: transparent;
+        margin-left: 440px;
+    }
+
+    .pop-btn {
+        margin: 30px 0 30px 0;
+    }
+}
+
+@media only screen and (min-width : 1700px) {
+
+    .bearImg {
+        width: 20%;
+        bottom: 70%;
+    }
+
+    .popbear-show {
+        width: 10%;
+        height: 80%;
+    }
+
+    .pop-btn {
+        margin: 50px 0 30px 0;
+    }
+}

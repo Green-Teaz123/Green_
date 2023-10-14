@@ -6,7 +6,6 @@ export default function Order() {
     const [orders, setOrders] = useState([]);
     
     useEffect(() => {
-        // Make an API request when the component mounts
         fetch("https://localhost:5001/api/getOrders")
             .then(response => {
                 if (!response.ok) {
@@ -16,8 +15,6 @@ export default function Order() {
             })
             .then(data => {
                 setOrders(data);
-
-                // console.log(data);
 
             })
             .catch(error => {
@@ -49,8 +46,8 @@ export default function Order() {
                                 </svg>
                             </div>
                         </div>
-                        <p>Restaurant name: {order.res_name}</p>
-                        <p>Pick up location: {order.place}</p>
+                        <div className="res-lo-header"> <p className="res-lo-header">Restaurant name: </p> <p className="gray-scale">{order.res_name}</p> </div>
+                        <div className="res-lo-header"> <p className="res-lo-header">Pick up location: </p> <p className="gray-scale">{order.place}</p> </div>
                     </div>
                 ))}
             </div>

@@ -49,3 +49,12 @@
     justify-content: baseline;
     margin-left: 25px;
 }
+
+@media screen and (min-width: 800px) {
+
+    
+    .box-3 {
+        width: 900px;
+    }
+    
+}
