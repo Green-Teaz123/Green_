@@ -28,7 +28,7 @@ export default function Popbear({picker,name,Id,comment,closePopupBear},order) {
             })
           };
           
-          fetch(`https://localhost:7263/api/isGrabTrue/${Id}`, requestOptions)
+          fetch(`https://localhost:5001/api/isGrabTrue/${Id}`, requestOptions)
             .then((response) => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -68,7 +68,7 @@ export default function Popbear({picker,name,Id,comment,closePopupBear},order) {
             })
           };
           
-          fetch(`https://localhost:7263/api/isGrabFalse/${Id}`, requestOptions)
+          fetch(`https://localhost:5001/api/isGrabFalse/${Id}`, requestOptions)
             .then((response) => {
               if (!response.ok) {
                 throw new Error('Network response was not ok');
