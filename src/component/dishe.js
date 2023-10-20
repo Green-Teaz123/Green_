@@ -7,7 +7,7 @@ export default function Dish({dish, quantity, items, index, setItems}) {
         const updatedItems = [...items];
         updatedItems.splice(index, 1);
         setItems(updatedItems);
-        console.log('delete dish success');
+        // console.log('delete dish success');
     }
 
     return (

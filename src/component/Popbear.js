@@ -4,7 +4,7 @@ import "../styles/Popbear.css";
 
 
 export default function Popbear({picker,name,Id,comment,closePopupBear},order) {
-    console.log(order)
+    // console.log(order)
     function isGrabTrue() {
         const requestOptions = {
             method: 'PUT',
@@ -36,11 +36,11 @@ export default function Popbear({picker,name,Id,comment,closePopupBear},order) {
               return response.json();
             })
             .then((data) => {
-              console.log(data.isGrab)
+              // console.log(data.isGrab)
               window.location.href = "http://localhost:3000";
             })
             .catch((error) => {
-              console.error('Error fetching data:', error);
+              // console.error('Error fetching data:', error);
             });
       }
 
@@ -76,11 +76,11 @@ export default function Popbear({picker,name,Id,comment,closePopupBear},order) {
               return response.json();
             })
             .then((data) => {
-                console.log(data.isGrab)
+                // console.log(data.isGrab)
                 window.location.href = "http://localhost:3000";
               })
             .catch((error) => {
-              console.error('Error fetching data:', error);
+              // console.error('Error fetching data:', error);
             });
       }
     return (

@@ -28,12 +28,6 @@ export default function Popup({ closePopup, orderName, checkbear, getData}, prop
     }
     
 
-    console.log(deliveryName,deliveryComment);
-
-    // const to_the_next_package = () => {
-    //     closePopup();
-    //     // <Popbear name={orderName} s_comment={comment} Id={OrderId}/>
-    // }
 
     return (
         <div className="popup">

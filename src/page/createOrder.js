@@ -32,7 +32,7 @@ export default function CreateOrder() {
         // clear input
         document.querySelector('.dishe-name').value = "";
         document.querySelector('.quantity').value = "";  
-        console.log('add dish success');
+        // console.log('add dish success');
     }
 
     const handleSubmit = (e) => {
@@ -52,11 +52,11 @@ export default function CreateOrder() {
                 items: items
             })
         }).then((e) =>
-        console.log(e),
-        console.log('add order success'))
-        console.log(items)
-        console.log("su")
-        window.location.href = "http://localhost:3000/";
+        // console.log(e),
+        // console.log('add order success'))
+        // console.log(items)
+        // console.log("su")
+        window.location.href = "http://localhost:3000/")
         }
 
     return (

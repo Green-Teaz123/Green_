@@ -21,7 +21,7 @@ export default function OrderInfo() {;
     const orderName = props.orderName;
     const [deliveryName, setDeliveryName] = useState("");
     const [deliveryComment, setDeliveryComment] = useState("");
-    // console.log('orderName in YourComponent:', orderName);
+    // consoleconsole.log('orderName in YourComponent:', orderName);
 
 
     const to_the_next_package = () => {
@@ -46,7 +46,7 @@ export default function OrderInfo() {;
                 // console.log(data.items.length);
             })
             .catch(error => {
-                console.error("Error fetching orders:", error);
+                // console.error("Error fetching orders:", error);
             })
     }, []);
 
@@ -70,19 +70,19 @@ export default function OrderInfo() {;
     const checkbear = (e) => {
         setPopupVisible(false);
         setPopbear(false);
-        console.log("close popup");
+        // console.log("close popup");
     }
 
     const handleDatafromPopup = (data1,data2) => {
-        console.log('DATA IS ',data1,data2);
-        console.log("get data from popup");
+        // console.log('DATA IS ',data1,data2);
+        // console.log("get data from popup");
         setDeliveryName(data1);
         setDeliveryComment(data2);
     }
 
     const closeBear = () => {
         setPopbear(false);
-        console.log("close bear");
+        // console.log("close bear");
     }
 
 
@@ -131,7 +131,7 @@ export default function OrderInfo() {;
                         </div>
 
                         <div className="show-dishe">
-                            {console.log(orders.items)}
+                            {/* {console.log(orders.items)} */}
                             {orders && orders.items && orders.items.length > 0 && loopOrder(orders.items.length) }
                             {/* insert Order  here */}
                         </div>
