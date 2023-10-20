@@ -53,8 +53,11 @@ export default function CreateOrder() {
             })
         }).then((e) =>
         console.log(e),
-        console.log('add order success'))}
-        console.log(items);
+        console.log('add order success'))
+        console.log(items)
+        console.log("su")
+        window.location.href = "http://localhost:3000/";
+        }
 
     return (
         <div>
